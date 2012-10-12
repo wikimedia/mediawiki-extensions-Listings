@@ -61,5 +61,3 @@ $messages['it'] = array(
 	'listingsPosition'          => 'posizione',
 	'listingsPositionTemplate'  => '',
 );
-
-?>
