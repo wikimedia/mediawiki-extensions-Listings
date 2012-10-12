@@ -24,70 +24,116 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['Listings'] = $dir . 'Listings.i18n.php';
 
-$wgExtensionFunctions[] = 'wfSetupListings';
+$wgHooks['ParserFirstCallInit'][] = 'wfRegisterListings';
 
 $wgExtensionCredits['parserhook']['Listings'] = array(
 	'path' => __FILE__,
 	'name' => 'Listings',
 	'url' => 'http://www.wikivoyage.org/tech/Listings_extension',
-	'description' => 'Location listings extension',
 	'descriptionmsg' => 'listings-desc',
 	'author' => 'Roland Unger',
-	'version' => '1.03'
+	'version' => '1.1'
 );
 
-function wfSetupListings() {
-	global $wgParser;
-
-	$wgParser->setHook( 'buy', 'buyListings' );
-	$wgParser->setHook( 'do', 'doListings' );
-	$wgParser->setHook( 'drink', 'drinkListings' );
-	$wgParser->setHook( 'eat', 'eatListings' );
-	$wgParser->setHook( 'listing', 'otherlistings' );
-	$wgParser->setHook( 'see', 'seeListings' );
-	$wgParser->setHook( 'sleep', 'sleepListings' );
+/**
+ * @param $parser Parser
+ * @return bool
+ */
+function wfRegisterListings( $parser ) {
+	$parser->setHook( 'buy', 'buyListings' );
+	$parser->setHook( 'do', 'doListings' );
+	$parser->setHook( 'drink', 'drinkListings' );
+	$parser->setHook( 'eat', 'eatListings' );
+	$parser->setHook( 'listing', 'otherlistings' );
+	$parser->setHook( 'see', 'seeListings' );
+	$parser->setHook( 'sleep', 'sleepListings' );
 
 	return true;
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function buyListings( $input, array $args, $parser ) {
 	return listings( 'buy', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function doListings( $input, array $args, $parser ) {
 	return listings( 'do', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function drinkListings( $input, array $args, $parser ) {
 	return listings( 'drink', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function eatListings( $input, array $args, $parser ) {
 	return listings( 'eat', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function otherListings( $input, array $args, $parser ) {
 	return listings( 'listing', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function seeListings( $input, array $args, $parser ) {
 	return listings( 'see', $input, $args, $parser );
 }
 
+/**
+ * @param $input
+ * @param $args array
+ * @param $parser Parser
+ * @return string
+ */
 function sleepListings( $input, array $args, $parser ) {
 	return listings( 'sleep', $input, $args, $parser );
 }
 
+/**
+ * @param $aType
+ * @param $input
+ * @param $args
+ * @param $parser Parser
+ * @return string
+ */
 function listings( $aType, $input, $args, $parser ) {
-	$type = $aType;
 	$input = $parser->internalParse( trim( $input ) );
-	$out = '';
-	foreach ( $args as $arg ) $arg = htmlspecialchars( $arg );
 
 	if ( isset( $args['name'] ) ) {
 		$name = $args['name'];
-	}
-	else {
+	} else {
 		$name = wfMsgForContent( 'listingsUnknown' );
 	}
 	if ( isset( $args['alt'] ) ) {
@@ -150,24 +196,19 @@ function listings( $aType, $input, $args, $parser ) {
 	} else {
 		$checkout = '';
 	}
-	if ( isset( $args['lat'] ) and is_numeric( $args['lat'] ) ) {
+	if ( isset( $args['lat'] ) && is_numeric( $args['lat'] ) ) {
 		$lat = $args['lat'];
 	} else {
 		$lat = 361;
 	}
-	if ( isset( $args['long'] ) and is_numeric( $args['long'] ) ) {
+	if ( isset( $args['long'] ) && is_numeric( $args['long'] ) ) {
 		$long = $args['long'];
 	} else {
 		$long = 361;
 	}
-	if ( isset( $args['tags'] ) ) {
-		$tags = $args['tags'];
-	} else {
-		$tags = 0;
-	}
 
 	$position = '';
-	if ( ( $lat < 361 ) and ( $long < 361 ) ) {
+	if ( $lat < 361 && $long < 361 ) {
 		if ( !wfEmptyMsg( 'listingsPositionTemplate', wfMsgForContent( 'listingsPositionTemplate' ) ) ) {
 			$position = wfMsgForContent( 'listingsPositionTemplate', $lat, $long );
 			if ( $position != '' ) {
@@ -184,11 +225,11 @@ function listings( $aType, $input, $args, $parser ) {
 	if ( $alt != '' ) {
 		$out .= ' (<em>' . $alt . '</em>)';
 	}
-	if ( ( $address != '' ) or ( $directions != '' ) or ( $position != '' ) ) {
+	if ( ( $address != '' ) || ( $directions != '' ) || ( $position != '' ) ) {
 		$out .= ', ' . $address;
-		if ( ( $directions != '' ) or ( $position != '' ) ) {
+		if ( ( $directions != '' ) || ( $position != '' ) ) {
 			$out .= ' (<em>' . $directions;
-			if ( ( $directions != '' ) and ( $position != '' ) ) {
+			if ( ( $directions != '' ) && ( $position != '' ) ) {
 				$out .= ', ';
 			}
 			if ( $position != '' ) {
@@ -223,7 +264,7 @@ function listings( $aType, $input, $args, $parser ) {
 		$tollfreeSymbol = wfMsgForContent( 'listingsTollfree' );
 	}
 
-	if ( ( $phone != '' ) or ( $tollfree != '' ) ) {
+	if ( ( $phone != '' ) || ( $tollfree != '' ) ) {
 		$out .= ', ' . $phoneSymbol . ' ' . $phone;
 		if ( $tollfree != '' ) {
 			$out .= ' (' . $tollfreeSymbol . ': ' . $tollfree . ')';
@@ -240,7 +281,7 @@ function listings( $aType, $input, $args, $parser ) {
 	if ( $hours != '' ) {
 		$out .= $hours . '. ';
 	}
-	if ( ( $checkin != '' ) or ( $checkout != '' ) ) {
+	if ( ( $checkin != '' ) || ( $checkout != '' ) ) {
 		if ( $checkin != '' ) {
 			$out .= wfMsgForContent( 'listingsCheckin' ) . ': ' . $checkin;
 			if ( $checkout != '' ) {

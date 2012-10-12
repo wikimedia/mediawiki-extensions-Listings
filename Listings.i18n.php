@@ -25,6 +25,10 @@ $messages['en'] = array(
 	'listings-desc'             => 'Location listings extension',
 );
 
+$messages['qqq'] = array(
+	'listings-desc'             => '{{desc}}',
+);
+
 $messages['de'] = array(
 	'listingsUnknown'           => 'Unbekannte Einrichtung',
 	'listingsPhone'             => 'Tel.',
