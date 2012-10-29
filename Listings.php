@@ -18,10 +18,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
 }
 
-$wgExtensionCredits['parserhook']['Listings'] = array(
+$wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Listings',
-	'url' => '//www.mediawiki.org/wiki/Extension:Listings',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:Listings',
 	'descriptionmsg' => 'listings-desc',
 	'author' => 'Roland Unger',
 	'version' => '1.1'

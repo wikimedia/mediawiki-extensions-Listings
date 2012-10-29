@@ -9,13 +9,13 @@
 $messages = array();
 
 $messages['en'] = array(
-	'listings-desc'              => 'Location listings extension',
+	'listings-desc'              => 'Add tags for listing locations',
 	'listings-unknown'           => 'Unknown destination',
 	'listings-phone'             => 'phone',
 	'listings-phone-symbol'      => '☎',
 	'listings-fax'               => 'fax',
 	'listings-fax-symbol'        => '',
-	'listings-email'             => 'email',
+	'listings-email'             => 'e-mail',
 	'listings-email-symbol'      => '',
 	'listings-tollfree'          => 'toll-free',
 	'listings-tollfree-symbol'   => '',
