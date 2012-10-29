@@ -91,13 +91,11 @@ class Listings {
 	 * @return string
 	 */
 	private static function listingsTag( $aType, $input, $args, $parser ) {
-		$input = $parser->internalParse( trim( $input ) );
-
 		// @todo Should the args be made safe HTML?
 		if ( isset( $args['name'] ) ) {
 			$name = $args['name'];
 		} else {
-			$name = wfMessage( 'listingsUnknown' )->inContentLanguage()->text();
+			$name = wfMessage( 'listings-unknown' )->inContentLanguage()->text();
 		}
 		if ( isset( $args['alt'] ) ) {
 			$alt = $parser->internalParse( $args['alt'] );
@@ -171,20 +169,24 @@ class Listings {
 		}
 
 		$position = '';
-		if ( $lat < 361 && $long < 361 ) {
-			if ( !wfMessage( 'listingsPositionTemplate' )->inContentLanguage()->isDisabled() ) {
-				$position = wfMessage( 'listingsPositionTemplate', $lat, $long )->inContentLanguage()->text();
+		if ( $lat < 361 && $long < 361 ) { // @fixme: incorrect validation
+			if ( !wfMessage( 'listings-position-template' )->inContentLanguage()->isDisabled() ) {
+				$position = wfMessage( 'listings-position-template', $lat, $long )->inContentLanguage()->text();
 				if ( $position != '' ) {
 					$position = $parser->internalParse( '{{' . $position . '}}' );
 					// @todo FIXME: i18n issue (hard coded colon/space)
-					$position = wfMessage( 'listingsPosition' )->inContentLanguage()->text() . ': ' . $position;
+					$position = wfMessage( 'listings-position', $position )->inContentLanguage()->text();
 				}
 			}
 		}
 
-		$out = '<strong>' . $name . '</strong>';
+		// @fixme: a lot of localisation-unfriendly patchwork below
+		$out = Html::rawElement( 'strong', array(), $name );
 		if ( $url != '' ) {
-			$out = '<a href="' . $url . '" class="external text" rel="nofollow" title="' . $name . '">' . $out . '</a>';
+			$out = Html::rawElement( 'a',
+				array( 'href' => $url, 'class' => 'external text', 'rel' => 'nofollow', 'title' => $name ),
+				$out
+			);
 		}
 		if ( $alt != '' ) {
 			// @todo FIXME: i18n issue (hard coded parentheses)
@@ -206,75 +208,74 @@ class Listings {
 			}
 		}
 
-		$phoneSymbol = $parser->internalParse( wfMessage( 'listingsPhoneSymbol' )->inContentLanguage()->text() );
+		$phoneSymbol = $parser->internalParse( wfMessage( 'listings-phone-symbol' )->inContentLanguage()->text() );
 		if ( $phoneSymbol != '' ) {
-			$phoneSymbol = '<abbr title="' . wfMessage( 'listingsPhone' )->inContentLanguage()->text() . '">' . $phoneSymbol . '</abbr>';
+			$phoneSymbol = '<abbr title="' . wfMessage( 'listings-phone' )->inContentLanguage()->escaped() . '">' . $phoneSymbol . '</abbr>';
 		} else {
-			$phoneSymbol = wfMessage( 'listingsPhone' )->inContentLanguage()->text();
+			$phoneSymbol = wfMessage( 'listings-phone' )->inContentLanguage()->escaped();
 		}
-		$faxSymbol = $parser->internalParse( wfMessage( 'listingsFaxSymbol' )->inContentLanguage()->text() );
+		$faxSymbol = $parser->internalParse( wfMessage( 'listings-fax-symbol' )->inContentLanguage()->text() );
 		if ( $faxSymbol != '' ) {
-			$faxSymbol = '<abbr title="' . wfMessage( 'listingsFax' )->inContentLanguage()->text() . '">' . $faxSymbol . '</abbr>';
+			$faxSymbol = '<abbr title="' . wfMessage( 'listings-fax' )->inContentLanguage()->escaped() . '">' . $faxSymbol . '</abbr>';
 		} else {
-			$faxSymbol = wfMessage( 'listingsFax' )->inContentLanguage()->text();
+			$faxSymbol = wfMessage( 'listings-fax' )->inContentLanguage()->escaped();
 		}
-		$emailSymbol = $parser->internalParse( wfMessage( 'listingsEmailSymbol' )->inContentLanguage()->text() );
+		$emailSymbol = $parser->internalParse( wfMessage( 'listings-email-symbol' )->inContentLanguage()->text() );
 		if ( $emailSymbol != '' ) {
-			$emailSymbol = '<abbr title="' . wfMessage( 'listingsEmail' )->inContentLanguage()->text() . '">' . $emailSymbol . '</abbr>';
+			$emailSymbol = '<abbr title="' . wfMessage( 'listings-email' )->inContentLanguage()->escaped() . '">' . $emailSymbol . '</abbr>';
 		} else {
-			$emailSymbol = wfMessage( 'listingsEmail' )->inContentLanguage()->text();
+			$emailSymbol = wfMessage( 'listings-email' )->inContentLanguage()->escaped();
 		}
-		$tollfreeSymbol = $parser->internalParse( wfMessage( 'listingsTollfreeSymbol' )->inContentLanguage()->text() );
+		$tollfreeSymbol = $parser->internalParse( wfMessage( 'listings-tollfree-symbol' )->inContentLanguage()->text() );
 		if ( $tollfreeSymbol != '' ) {
-			$tollfreeSymbol = '<abbr title="' . wfMessage( 'listingsTollfree' )->inContentLanguage()->text() . '">' . $tollfreeSymbol . '</abbr>';
+			$tollfreeSymbol = '<abbr title="' . wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped() . '">' . $tollfreeSymbol . '</abbr>';
 		} else {
-			$tollfreeSymbol = wfMessage( 'listingsTollfree' )->inContentLanguage()->text();
+			$tollfreeSymbol = wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped();
 		}
 
 		if ( ( $phone != '' ) || ( $tollfree != '' ) ) {
 			// @todo FIXME: i18n issue (hard coded comma list, space)
-			$out .= ', ' . $phoneSymbol . ' ' . $phone;
+			$out .= ', ' . $phoneSymbol . ' ' . htmlspecialchars( $phone );
 			if ( $tollfree != '' ) {
 				// @todo FIXME: i18n issue (hard coded parentheses)
-				$out .= ' (' . $tollfreeSymbol . ': ' . $tollfree . ')';
+				$out .= ' (' . $tollfreeSymbol . ': ' . htmlspecialchars( $tollfree ) . ')';
 			}
 		}
 		if ( $fax != '' ) {
 			// @todo FIXME: i18n issue (hard coded comma list, colon/space)
-			$out .= ', ' . $faxSymbol . ': ' . $fax;
+			$out .= ', ' . $faxSymbol . ': ' . htmlspecialchars( $fax );
 		}
 		if ( $email != '' ) {
 			// @todo FIXME: i18n issue (hard comma list, coded colon/space)
-			$out .= ', ' . $emailSymbol . ': ' . '<a class="email" href="mailto:' . $email . '">' . $email . '</a>';
+			$out .= ', ' . $emailSymbol . ': '
+				. Html::element( 'a', array( 'class' => 'email', 'href' => "mailto:$email" ), $email );
 		}
 		// @todo FIXME: i18n issue (hard coded text)
 		$out .= '. ';
 
 		if ( $hours != '' ) {
-			$out .= $hours . '. ';
+			$out .= htmlspecialchars( $hours ) . '. ';
 		}
 		if ( ( $checkin != '' ) || ( $checkout != '' ) ) {
 			if ( $checkin != '' ) {
-				$out .= wfMessage( 'listingsCheckin' )->inContentLanguage()->text() . ': ' . $checkin;
+				$out .= wfMessage( 'listings-checkin', $checkin )->inContentLanguage()->escaped();
 				if ( $checkout != '' ) {
 					// @todo FIXME: i18n issue (hard coded comma list)
 					$out .= ', ';
 				}
 			}
 			if ( $checkout != '' ) {
-				$out .= wfMessage( 'listingsCheckout' )->inContentLanguage()->text() . ': ' . $checkout;
+				$out .= wfMessage( 'listings-checkout', $checkout )->inContentLanguage()->escaped();
 			}
 			// @todo FIXME: i18n issue (hard coded wut?)
 			$out .= '. ';
 		}
 		if ( $price != '' ) {
 			// @todo FIXME: i18n issue (hard coded text)
-			$out .= $price . '. ';
+			$out .= htmlspecialchars( $price ) . '. ';
 		}
 
-		if ( $input != '' ) {
-			$out .= $input;
-		}
+		$out .= $parser->internalParse( $input );
 
 		return $out;
 	}
