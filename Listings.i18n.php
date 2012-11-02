@@ -78,6 +78,21 @@ $messages['fr'] = array(
 	'listings-position' => 'situation: $1',
 );
 
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'listings-desc' => 'Engade etiquetas para listar localizacións',
+	'listings-unknown' => 'Destino descoñecido',
+	'listings-phone' => 'teléfono',
+	'listings-fax' => 'fax',
+	'listings-email' => 'correo electrónico',
+	'listings-tollfree' => 'gratuíto',
+	'listings-checkin' => 'Inscrición: $1',
+	'listings-checkout' => 'saída: $1',
+	'listings-position' => 'posición: $1',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
@@ -142,4 +157,18 @@ $messages['mk'] = array(
 	'listings-checkin' => 'Пријава: $1',
 	'listings-checkout' => 'одјава: $1',
 	'listings-position' => 'положба: $1',
+);
+
+/** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
+ */
+$messages['zh-hans'] = array(
+	'listings-unknown' => '未知目标',
+	'listings-phone' => '电话',
+	'listings-fax' => '传真',
+	'listings-email' => '电子邮件',
+	'listings-tollfree' => '免费电话',
+	'listings-checkin' => '登入：$1',
+	'listings-checkout' => '登出：$1',
+	'listings-position' => '位置：$1',
 );
