@@ -131,6 +131,7 @@ $messages['ja'] = array(
 	'listings-tollfree' => 'フリーダイヤル',
 	'listings-checkin' => 'チェックイン: $1',
 	'listings-checkout' => 'チェックアウト: $1',
+	'listings-position' => '位置: $1',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
