@@ -93,6 +93,21 @@ $messages['gl'] = array(
 	'listings-position' => 'posición: $1',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'listings-desc' => 'הוספת תגים ליצירת רשימות מיקומים',
+	'listings-unknown' => 'יעד בלתי־ידוע',
+	'listings-phone' => 'טלפון',
+	'listings-fax' => 'פקס',
+	'listings-email' => 'דוא"ל',
+	'listings-tollfree' => 'שיחת חינם',
+	'listings-checkin' => 'כניסה: $1',
+	'listings-checkout' => 'יציאה: $1',
+	'listings-position' => 'מיקום: $1',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
@@ -158,6 +173,36 @@ $messages['mk'] = array(
 	'listings-checkin' => 'Пријава: $1',
 	'listings-checkout' => 'одјава: $1',
 	'listings-position' => 'положба: $1',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'listings-desc' => 'Menambahkan teg untuk menyenaraikan lokasi',
+	'listings-unknown' => 'Destinasi tidak dikenali',
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'faks',
+	'listings-email' => 'e-mel',
+	'listings-tollfree' => 'talian percuma',
+	'listings-checkin' => 'Daftar masuk: $1',
+	'listings-checkout' => 'daftar keluar: $1',
+	'listings-position' => 'kedudukan: $1',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'listings-desc' => 'Voegt tags toe voor adressen',
+	'listings-unknown' => 'Onbekende bestemming',
+	'listings-phone' => 'telefoonnummer',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-mailadres',
+	'listings-tollfree' => 'gratis nummer',
+	'listings-checkin' => 'Ingecheckt: $1',
+	'listings-checkout' => 'Uitgecheckt: $1',
+	'listings-position' => 'positie: $1',
 );
 
 /** Simplified Chinese (中文（简体）‎)
