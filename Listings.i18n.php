@@ -149,6 +149,21 @@ $messages['ja'] = array(
 	'listings-position' => '位置: $1',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'listings-desc' => '장소를 나열하기 위한 태그 추가',
+	'listings-unknown' => '알 수 없는 목적지',
+	'listings-phone' => '전화번호',
+	'listings-fax' => '팩스',
+	'listings-email' => '이메일',
+	'listings-tollfree' => '수신자 부담',
+	'listings-checkin' => '체크인: $1',
+	'listings-checkout' => '체크아웃: $1',
+	'listings-position' => '위치: $1',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
