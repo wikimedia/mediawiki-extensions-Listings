@@ -29,7 +29,7 @@ $messages['en'] = array(
  * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'listings-desc' => '{{desc}}',
+	'listings-desc' => '{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}',
 	'listings-phone-symbol' => '{{Optional}}',
 );
 
