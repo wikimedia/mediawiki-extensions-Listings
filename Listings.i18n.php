@@ -220,6 +220,13 @@ $messages['nl'] = array(
 	'listings-position' => 'positie: $1',
 );
 
+/** Russian (русский)
+ * @author ShinePhantom
+ */
+$messages['ru'] = array(
+	'listings-fax' => 'Факс',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
