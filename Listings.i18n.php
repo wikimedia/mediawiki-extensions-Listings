@@ -190,6 +190,18 @@ $messages['mk'] = array(
 	'listings-position' => 'положба: $1',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'listings-phone' => 'ഫോൺ',
+	'listings-fax' => 'ഫാക്സ്',
+	'listings-email' => 'ഇമെയിൽ',
+	'listings-tollfree' => 'ടോൾ-ഫ്രീ',
+	'listings-checkin' => 'പ്രവേശിച്ചത്: $1',
+	'listings-checkout' => 'ഇറങ്ങിയത്: $1',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
