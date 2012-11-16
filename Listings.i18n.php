@@ -33,6 +33,18 @@ $messages['qqq'] = array(
 	'listings-phone-symbol' => '{{Optional}}',
 );
 
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'listings-desc' => 'Дадае тэгі для зьмяшчэньня розных месцаў',
+	'listings-unknown' => 'Невядомае месца',
+	'listings-phone' => 'тэлефон',
+	'listings-fax' => 'факс',
+	'listings-email' => 'электронная пошта',
+	'listings-tollfree' => 'бясплатны званок',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
