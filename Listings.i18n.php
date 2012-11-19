@@ -60,6 +60,16 @@ $messages['de'] = array(
 	'listings-position' => 'Lage: $1',
 );
 
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
+$messages['diq'] = array(
+	'listings-phone' => 'telefun',
+	'listings-fax' => 'feqs',
+	'listings-email' => 'e-posta',
+	'listings-position' => 'pozisyon: $1',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
