@@ -45,6 +45,19 @@ $messages['be-tarask'] = array(
 	'listings-tollfree' => 'бясплатны званок',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'listings-phone' => 'pellgomz',
+	'listings-fax' => 'pelleiler',
+	'listings-email' => 'postel',
+	'listings-tollfree' => 'digoust',
+	'listings-checkin' => 'Enskrivadurioù : $1',
+	'listings-checkout' => 'kontroll : $1',
+	'listings-position' => "lec'hiadur : $1",
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
