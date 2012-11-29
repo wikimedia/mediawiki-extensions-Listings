@@ -98,6 +98,15 @@ $messages['es'] = array(
 	'listings-position' => 'posición: $1',
 );
 
+/** Finnish (suomi)
+ * @author Nedergard
+ */
+$messages['fi'] = array(
+	'listings-phone' => 'puhelin',
+	'listings-fax' => 'faksi',
+	'listings-email' => 'sähköposti',
+);
+
 /** French (français)
  * @author Gomoko
  */
