@@ -283,6 +283,17 @@ $messages['ru'] = array(
 	'listings-fax' => 'Факс',
 );
 
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'listings-unknown' => 'Невідоме місце',
+	'listings-phone' => 'телефон',
+	'listings-fax' => 'факс',
+	'listings-email' => 'електронна пошта',
+	'listings-tollfree' => 'безкоштовно',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
