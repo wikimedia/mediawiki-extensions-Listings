@@ -91,6 +91,28 @@ class Listings {
 	 * @return string
 	 */
 	private static function listingsTag( $aType, $input, $args, $parser ) {
+
+		/*
+		 * if a {{listings}} template exists, feed tag name and parameter list to template verbatim and exit
+		 */
+		$ltemplate = '';
+		if ( !wfMessage( 'listings-template' )->inContentLanguage()->isDisabled() ) {
+			$ltemplate = wfMessage( 'listings-template' )->inContentLanguage()->text();
+		}
+		if ( $ltemplate != '' ) {
+			$inputtext = '{{' . $ltemplate . '|type=' . $aType;
+			foreach ( $args as $key => $value ) {
+				$inputtext .= '|' . $key . '=' . $value;
+			}
+			$inputtext .= '|' . $input . '}}';
+			$out = $parser->internalParse( $inputtext );
+			return $out;
+		}
+
+		/*
+		 * if no pre-defined template exists, generate listing from parameters normally
+		 */
+
 		// @todo Should the args be made safe HTML?
 		if ( isset( $args['name'] ) ) {
 			$name = $args['name'];
