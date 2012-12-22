@@ -58,6 +58,16 @@ $messages['br'] = array(
 	'listings-position' => "lec'hiadur : $1",
 );
 
+/** Czech (česky)
+ * @author Vks
+ */
+$messages['cs'] = array(
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-mail',
+	'listings-tollfree' => 'bezplatně',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -96,6 +106,25 @@ $messages['es'] = array(
 	'listings-checkin' => 'Registrarse: $1',
 	'listings-checkout' => 'verificación: $1',
 	'listings-position' => 'posición: $1',
+);
+
+/** Estonian (eesti)
+ * @author Avjoska
+ */
+$messages['et'] = array(
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'faks',
+	'listings-email' => 'e-post',
+);
+
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'listings-unknown' => 'مقصد ناشناخته',
+	'listings-phone' => 'تلفن',
+	'listings-fax' => 'فکس',
+	'listings-email' => 'پست الکترونیکی',
 );
 
 /** Finnish (suomi)
@@ -193,6 +222,16 @@ $messages['ja'] = array(
 	'listings-position' => '位置: $1',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'listings-unknown' => 'უცნობი მიმართულება',
+	'listings-phone' => 'ტელეფონი',
+	'listings-fax' => 'ფაქსი',
+	'listings-email' => 'ელ. ფოსტა',
+);
+
 /** Korean (한국어)
  * @author 아라
  */
@@ -276,11 +315,30 @@ $messages['nl'] = array(
 	'listings-position' => 'positie: $1',
 );
 
+/** Romanian (română)
+ * @author Firilacroco
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'listings-unknown' => 'Destinație necunoscută',
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'fax',
+	'listings-email' => 'email',
+	'listings-position' => 'poziție: $1',
+);
+
 /** Russian (русский)
  * @author ShinePhantom
  */
 $messages['ru'] = array(
 	'listings-fax' => 'Факс',
+);
+
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'listings-email' => 'විද්‍යුත්-තැපෑල',
 );
 
 /** Ukrainian (українська)
