@@ -193,6 +193,16 @@ $messages['hsb'] = array(
 	'listings-position' => 'pozicija: $1',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'listings-phone' => 'telepon',
+	'listings-fax' => 'faks',
+	'listings-email' => 'surel',
+	'listings-tollfree' => 'bebas pulsa',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
@@ -258,6 +268,16 @@ $messages['lb'] = array(
 	'listings-position' => 'Positioun: $1',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'listings-phone' => 'telefonas',
+	'listings-fax' => 'faksas',
+	'listings-email' => 'el. paštas',
+	'listings-position' => 'pareigos: $1',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
@@ -317,13 +337,14 @@ $messages['nl'] = array(
 
 /** Romanian (română)
  * @author Firilacroco
+ * @author Minisarm
  * @author Stelistcristi
  */
 $messages['ro'] = array(
 	'listings-unknown' => 'Destinație necunoscută',
 	'listings-phone' => 'telefon',
 	'listings-fax' => 'fax',
-	'listings-email' => 'email',
+	'listings-email' => 'e-mail',
 	'listings-position' => 'poziție: $1',
 );
 
@@ -338,7 +359,11 @@ $messages['ru'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'listings-unknown' => 'නොදන්නා ගමනාන්තය',
+	'listings-phone' => 'දුරකථනය',
+	'listings-fax' => 'ෆැක්ස්',
 	'listings-email' => 'විද්‍යුත්-තැපෑල',
+	'listings-position' => 'තරාතිරම: $1',
 );
 
 /** Ukrainian (українська)
