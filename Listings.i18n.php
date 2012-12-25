@@ -193,6 +193,16 @@ $messages['hsb'] = array(
 	'listings-position' => 'pozicija: $1',
 );
 
+/** Hungarian (magyar)
+ * @author Dj
+ */
+$messages['hu'] = array(
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-mail',
+	'listings-tollfree' => 'díjmentes',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
@@ -318,6 +328,20 @@ $messages['ms'] = array(
 	'listings-checkin' => 'Daftar masuk: $1',
 	'listings-checkout' => 'daftar keluar: $1',
 	'listings-position' => 'kedudukan: $1',
+);
+
+/** Maltese (Malti)
+ * @author Chrisportelli
+ */
+$messages['mt'] = array(
+	'listings-unknown' => 'Destinazzjoni mhux magħrufa',
+	'listings-phone' => 'telefown',
+	'listings-fax' => 'fax',
+	'listings-email' => 'ittre',
+	'listings-tollfree' => "b'xejn",
+	'listings-checkin' => 'Check-in: $1',
+	'listings-checkout' => 'check-out: $1',
+	'listings-position' => 'pożizzjoni: $1',
 );
 
 /** Dutch (Nederlands)
