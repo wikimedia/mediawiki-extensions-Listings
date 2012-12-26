@@ -387,7 +387,30 @@ $messages['si'] = array(
 	'listings-phone' => 'දුරකථනය',
 	'listings-fax' => 'ෆැක්ස්',
 	'listings-email' => 'විද්‍යුත්-තැපෑල',
+	'listings-tollfree' => 'ගාස්තුවෙන්-තොර',
 	'listings-position' => 'තරාතිරම: $1',
+);
+
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'listings-unknown' => 'Okänd destination',
+	'listings-phone' => 'telefon',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-post',
+	'listings-tollfree' => 'avgiftsfri',
+	'listings-position' => 'position: $1',
+);
+
+/** Tamil (தமிழ்)
+ * @author Shanmugamp7
+ */
+$messages['ta'] = array(
+	'listings-unknown' => 'அறியப்படாத இலக்கு',
+	'listings-phone' => 'தொலைபேசி',
+	'listings-fax' => 'தொலைநகல்',
+	'listings-email' => 'மின்னஞ்சல்',
 );
 
 /** Ukrainian (українська)
