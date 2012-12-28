@@ -359,6 +359,21 @@ $messages['nl'] = array(
 	'listings-position' => 'positie: $1',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'listings-desc' => 'Gionta tichëtte për listé locassion',
+	'listings-unknown' => 'Destinassion pa conossùa',
+	'listings-phone' => 'teléfono',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-mail',
+	'listings-tollfree' => 'gratis',
+	'listings-checkin' => 'Check-in: $1',
+	'listings-checkout' => 'check-out: $1',
+	'listings-position' => 'posission: $1',
+);
+
 /** Romanian (română)
  * @author Firilacroco
  * @author Minisarm
@@ -370,6 +385,15 @@ $messages['ro'] = array(
 	'listings-fax' => 'fax',
 	'listings-email' => 'e-mail',
 	'listings-position' => 'poziție: $1',
+);
+
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'listings-phone' => 'telefone',
+	'listings-fax' => 'fax',
+	'listings-email' => 'e-mail',
 );
 
 /** Russian (русский)
