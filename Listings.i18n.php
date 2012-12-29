@@ -93,6 +93,15 @@ $messages['diq'] = array(
 	'listings-position' => 'pozisyon: $1',
 );
 
+/** Greek (Ελληνικά)
+ * @author ZaDiak
+ */
+$messages['el'] = array(
+	'listings-phone' => 'τηλέφωνο',
+	'listings-fax' => 'φαξ',
+	'listings-email' => 'ηλεκτρονική διεύθυνση',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
