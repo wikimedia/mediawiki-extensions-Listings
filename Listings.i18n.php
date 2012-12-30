@@ -160,6 +160,13 @@ $messages['fr'] = array(
 	'listings-position' => 'situation: $1',
 );
 
+/** Franco-Provençal (arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'listings-desc' => 'Apond des balises por listar los emplacements',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
@@ -403,6 +410,9 @@ $messages['roa-tara'] = array(
 	'listings-phone' => 'telefone',
 	'listings-fax' => 'fax',
 	'listings-email' => 'e-mail',
+	'listings-checkin' => 'Committe: $1',
+	'listings-checkout' => 'estraje: $1',
+	'listings-position' => 'posizione: $1',
 );
 
 /** Russian (русский)
