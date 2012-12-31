@@ -66,6 +66,7 @@ $messages['cs'] = array(
 	'listings-fax' => 'fax',
 	'listings-email' => 'e-mail',
 	'listings-tollfree' => 'bezplatně',
+	'listings-position' => 'pozice: $1',
 );
 
 /** German (Deutsch)
@@ -165,6 +166,14 @@ $messages['fr'] = array(
  */
 $messages['frp'] = array(
 	'listings-desc' => 'Apond des balises por listar los emplacements',
+	'listings-unknown' => 'Dèstinacion encognua',
+	'listings-phone' => 'tèl.',
+	'listings-fax' => 'faxe',
+	'listings-email' => 'mèl.',
+	'listings-tollfree' => 'gratuit',
+	'listings-checkin' => 'Enscripcions : $1',
+	'listings-checkout' => 'contrôlo : $1',
+	'listings-position' => 'situacion : $1',
 );
 
 /** Galician (galego)
@@ -426,11 +435,14 @@ $messages['ru'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'listings-desc' => 'ලැයිස්තුගතකෙරුම් ස්ථාන සඳහා ටැගයන් එක් කරන්න',
 	'listings-unknown' => 'නොදන්නා ගමනාන්තය',
 	'listings-phone' => 'දුරකථනය',
 	'listings-fax' => 'ෆැක්ස්',
 	'listings-email' => 'විද්‍යුත්-තැපෑල',
 	'listings-tollfree' => 'ගාස්තුවෙන්-තොර',
+	'listings-checkin' => 'පරීක්ෂා කරන්න: $1',
+	'listings-checkout' => 'පිටවීම පරීක්ෂා කරන්න: $1',
 	'listings-position' => 'තරාතිරම: $1',
 );
 
@@ -454,6 +466,13 @@ $messages['ta'] = array(
 	'listings-phone' => 'தொலைபேசி',
 	'listings-fax' => 'தொலைநகல்',
 	'listings-email' => 'மின்னஞ்சல்',
+);
+
+/** Uyghur (Arabic script) (ئۇيغۇرچە)
+ * @author Sahran
+ */
+$messages['ug-arab'] = array(
+	'listings-email' => 'ئېلخەت',
 );
 
 /** Ukrainian (українська)
