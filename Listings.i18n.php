@@ -95,12 +95,13 @@ $messages['diq'] = array(
 );
 
 /** Greek (Ελληνικά)
+ * @author Protnet
  * @author ZaDiak
  */
 $messages['el'] = array(
 	'listings-phone' => 'τηλέφωνο',
 	'listings-fax' => 'φαξ',
-	'listings-email' => 'ηλεκτρονική διεύθυνση',
+	'listings-email' => 'διεύθυνση ηλεκτρονικού ταχυδρομείου',
 );
 
 /** Spanish (español)
