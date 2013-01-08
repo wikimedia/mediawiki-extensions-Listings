@@ -211,11 +211,14 @@ $messages['he'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
+	'listings-desc' => 'Znački za nalistowanje městnow přidać',
 	'listings-unknown' => 'Njeznaty cil',
 	'listings-phone' => 'telefon',
 	'listings-fax' => 'faks',
 	'listings-email' => 'e-mejl',
 	'listings-tollfree' => 'bjez popłatka',
+	'listings-checkin' => 'Přizjewjenje: $1',
+	'listings-checkout' => 'Wotzjewjenje: $1',
 	'listings-position' => 'pozicija: $1',
 );
 
