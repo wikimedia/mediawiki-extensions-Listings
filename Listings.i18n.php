@@ -106,9 +106,10 @@ $messages['el'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Gustronico
  */
 $messages['es'] = array(
-	'listings-desc' => 'Añadir etiquetas para enumerar las localizaciones',
+	'listings-desc' => 'Agrega etiquetas para listar lugares de interés',
 	'listings-unknown' => 'Destino desconocido',
 	'listings-phone' => 'teléfono',
 	'listings-fax' => 'fax',
