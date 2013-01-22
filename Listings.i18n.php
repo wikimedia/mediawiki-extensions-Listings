@@ -421,9 +421,12 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'listings-desc' => 'Aggiunge le tag pe elengà le località',
+	'listings-unknown' => 'Destinazione scanusciute',
 	'listings-phone' => 'telefone',
 	'listings-fax' => 'fax',
 	'listings-email' => 'e-mail',
+	'listings-tollfree' => 'aggratis',
 	'listings-checkin' => 'Committe: $1',
 	'listings-checkout' => 'estraje: $1',
 	'listings-position' => 'posizione: $1',
