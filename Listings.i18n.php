@@ -433,10 +433,16 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (русский)
+ * @author DCamer
  * @author ShinePhantom
  */
 $messages['ru'] = array(
+	'listings-unknown' => 'Неизвестное назначение',
+	'listings-phone' => 'телефон',
 	'listings-fax' => 'Факс',
+	'listings-email' => 'эл. почта',
+	'listings-tollfree' => 'бесплатно',
+	'listings-position' => 'позиция: $1',
 );
 
 /** Sinhala (සිංහල)
