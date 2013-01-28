@@ -278,6 +278,7 @@ $messages['ja'] = array(
 $messages['ka'] = array(
 	'listings-unknown' => 'უცნობი მიმართულება',
 	'listings-phone' => 'ტელეფონი',
+	'listings-phone-symbol' => '☎',
 	'listings-fax' => 'ფაქსი',
 	'listings-email' => 'ელ. ფოსტა',
 );
