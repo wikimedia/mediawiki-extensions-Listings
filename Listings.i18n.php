@@ -391,17 +391,18 @@ $messages['nl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'listings-desc' => 'Gionta tichëtte për listé locassion',
+	'listings-desc' => 'Gionté le tichëtte për listé le locassion',
 	'listings-unknown' => 'Destinassion pa conossùa',
-	'listings-phone' => 'teléfono',
+	'listings-phone' => 'teléfon',
 	'listings-fax' => 'fax',
-	'listings-email' => 'e-mail',
-	'listings-tollfree' => 'gratis',
-	'listings-checkin' => 'Check-in: $1',
-	'listings-checkout' => 'check-out: $1',
+	'listings-email' => 'pòsta eletrònica',
+	'listings-tollfree' => 'a gràtis',
+	'listings-checkin' => 'Anscrission: $1',
+	'listings-checkout' => 'contròl: $1',
 	'listings-position' => 'posission: $1',
 );
 
