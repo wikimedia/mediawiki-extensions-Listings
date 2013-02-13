@@ -281,6 +281,8 @@ $messages['ka'] = array(
 	'listings-phone-symbol' => '☎',
 	'listings-fax' => 'ფაქსი',
 	'listings-email' => 'ელ. ფოსტა',
+	'listings-tollfree' => 'უფასოდ',
+	'listings-position' => 'პოზიცია: $1',
 );
 
 /** Korean (한국어)
