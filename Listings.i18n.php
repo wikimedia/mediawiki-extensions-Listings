@@ -300,6 +300,13 @@ $messages['ko'] = array(
 	'listings-position' => '위치: $1',
 );
 
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
+ * @author George Animal
+ */
+$messages['ku-latn'] = array(
+	'listings-email' => 'e-name',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
