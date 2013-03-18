@@ -31,6 +31,17 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'listings-desc' => '{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}',
 	'listings-phone-symbol' => '{{Optional}}',
+	'listings-checkin' => 'Parameters:
+* $1 - check-in
+See also:
+* {{msg-mw|Listings-checkout}}',
+	'listings-checkout' => 'Parameters:
+* $1 - check-out
+See also:
+* {{msg-mw|Listings-checkin}}',
+	'listings-position' => 'Parameters:
+* $1 - {{msg-mw|listings-position-template}}
+As the message {{msg-mw|listings-position-template}} is empty, this message is unused.',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
