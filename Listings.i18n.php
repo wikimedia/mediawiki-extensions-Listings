@@ -30,7 +30,15 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'listings-desc' => '{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}',
+	'listings-unknown' => 'Used when the name is not specified, instead of name.',
+	'listings-phone' => 'Used as label for "phone" output.
+
+See also:
+* {{msg-mw|Listings-phone-symbol|Optional message}}',
 	'listings-phone-symbol' => '{{Optional}}',
+	'listings-fax' => 'Used as label for "fax" output.',
+	'listings-email' => 'Used as label for "email" output.',
+	'listings-tollfree' => 'Used as label for "toll-free" output.',
 	'listings-checkin' => 'Parameters:
 * $1 - check-in
 See also:
