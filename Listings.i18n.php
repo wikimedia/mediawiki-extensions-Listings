@@ -403,6 +403,14 @@ $messages['mt'] = array(
 	'listings-position' => 'pożizzjoni: $1',
 );
 
+/** Low German (Plattdüütsch)
+ * @author Joachim Mos
+ */
+$messages['nds'] = array(
+	'listings-fax' => 'Fax',
+	'listings-email' => 'E-Mail',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
