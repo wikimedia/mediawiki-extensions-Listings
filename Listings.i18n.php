@@ -278,10 +278,12 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Shirayuki
  */
 $messages['ja'] = array(
 	'listings-desc' => '場所を列挙するためのタグを追加する',
+	'listings-unknown' => '場所不明',
 	'listings-phone' => '電話',
 	'listings-fax' => 'FAX',
 	'listings-email' => 'メール',
