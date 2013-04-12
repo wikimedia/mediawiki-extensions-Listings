@@ -160,11 +160,13 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Nedergard
+ * @author Silvonen
  */
 $messages['fi'] = array(
 	'listings-phone' => 'puhelin',
 	'listings-fax' => 'faksi',
 	'listings-email' => 'sähköposti',
+	'listings-tollfree' => 'maksuton',
 );
 
 /** French (français)
