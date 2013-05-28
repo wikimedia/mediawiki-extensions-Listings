@@ -335,6 +335,7 @@ $messages['ku-latn'] = array(
  */
 $messages['lb'] = array(
 	'listings-unknown' => 'Onbekannten Zil',
+	'listings-phone' => 'Telefon',
 	'listings-fax' => 'Fax',
 	'listings-email' => 'E-Mail',
 	'listings-tollfree' => 'gratis',
