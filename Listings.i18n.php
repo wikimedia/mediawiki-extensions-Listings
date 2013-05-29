@@ -34,7 +34,8 @@ $messages['qqq'] = array(
 	'listings-phone' => 'Used as label for "phone" output.
 
 See also:
-* {{msg-mw|Listings-phone-symbol|Optional message}}',
+* {{msg-mw|Listings-phone-symbol|Optional message}}
+{{Identical|Phone}}',
 	'listings-phone-symbol' => '{{Optional}}',
 	'listings-fax' => 'Used as label for "fax" output.',
 	'listings-email' => 'Used as label for "email" output.',
@@ -339,6 +340,8 @@ $messages['lb'] = array(
 	'listings-fax' => 'Fax',
 	'listings-email' => 'E-Mail',
 	'listings-tollfree' => 'gratis',
+	'listings-checkin' => 'Umeldung: $1',
+	'listings-checkout' => 'Ofmeldung: $1',
 	'listings-position' => 'Positioun: $1',
 );
 
