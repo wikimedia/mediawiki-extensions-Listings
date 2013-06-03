@@ -53,6 +53,21 @@ See also:
 As the message {{msg-mw|listings-position-template}} is empty, this message is unused.',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'listings-desc' => 'Amiesta etiquetes pa facer llistes de llugares',
+	'listings-unknown' => 'Destín desconocíu',
+	'listings-phone' => 'teléfonu',
+	'listings-fax' => 'fax',
+	'listings-email' => 'corréu electrónicu',
+	'listings-tollfree' => 'de baldre',
+	'listings-checkin' => 'Llegada: $1',
+	'listings-checkout' => 'salida: $1',
+	'listings-position' => 'posición: $1',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
@@ -448,6 +463,13 @@ $messages['pms'] = array(
 	'listings-checkin' => 'Anscrission: $1',
 	'listings-checkout' => 'contròl: $1',
 	'listings-position' => 'posission: $1',
+);
+
+/** Brazilian Portuguese (português do Brasil)
+ * @author Luckas
+ */
+$messages['pt-br'] = array(
+	'listings-position' => 'posição: $1',
 );
 
 /** Romanian (română)
