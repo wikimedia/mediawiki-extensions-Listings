@@ -350,6 +350,7 @@ $messages['ku-latn'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'listings-desc' => 'Setzt Taggen derbäi fir Plazen opzelëschten',
 	'listings-unknown' => 'Onbekannten Zil',
 	'listings-phone' => 'Telefon',
 	'listings-fax' => 'Fax',
