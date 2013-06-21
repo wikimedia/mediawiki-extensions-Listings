@@ -37,7 +37,8 @@ See also:
 * {{msg-mw|Listings-phone-symbol|Optional message}}
 {{Identical|Phone}}',
 	'listings-phone-symbol' => '{{Optional}}',
-	'listings-fax' => 'Used as label for "fax" output.',
+	'listings-fax' => 'Used as label for "fax" output.
+{{Identical|Fax}}',
 	'listings-email' => 'Used as label for "email" output.',
 	'listings-tollfree' => 'Used as label for "toll-free" output.',
 	'listings-checkin' => 'Parameters:
