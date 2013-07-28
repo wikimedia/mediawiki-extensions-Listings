@@ -246,6 +246,13 @@ $messages['he'] = array(
 	'listings-position' => 'מיקום: $1',
 );
 
+/** Croatian (hrvatski)
+ * @author Roberta F.
+ */
+$messages['hr'] = array(
+	'listings-email' => 'e-pošta',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
