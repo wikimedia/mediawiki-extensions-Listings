@@ -567,14 +567,19 @@ $messages['ug-arab'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Base
  */
 $messages['uk'] = array(
+	'listings-desc' => 'Додати теґи для переліку місць',
 	'listings-unknown' => 'Невідоме місце',
 	'listings-phone' => 'телефон',
 	'listings-fax' => 'факс',
 	'listings-email' => 'електронна пошта',
 	'listings-tollfree' => 'безкоштовно',
+	'listings-checkin' => 'Заїзд: $1',
+	'listings-checkout' => 'виїзд: $1',
+	'listings-position' => 'розташування: $1',
 );
 
 /** Vietnamese (Tiếng Việt)
