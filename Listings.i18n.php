@@ -336,7 +336,7 @@ $messages['ka'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'listings-desc' => '장소를 나열하기 위한 태그 추가',
+	'listings-desc' => '장소를 나열하기 위한 태그를 추가합니다',
 	'listings-unknown' => '알 수 없는 목적지',
 	'listings-phone' => '전화번호',
 	'listings-fax' => '팩스',
