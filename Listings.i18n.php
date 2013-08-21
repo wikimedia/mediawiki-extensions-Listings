@@ -598,9 +598,11 @@ $messages['vi'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Hzy980512
  * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
+	'listings-desc' => '为列表中的地点添加标签',
 	'listings-unknown' => '未知目标',
 	'listings-phone' => '电话',
 	'listings-fax' => '传真',
