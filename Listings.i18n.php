@@ -105,6 +105,16 @@ $messages['cs'] = array(
 	'listings-position' => 'pozice: $1',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'listings-unknown' => 'Cyrchfan anhysbys',
+	'listings-fax' => 'ffacs',
+	'listings-email' => 'ebost',
+	'listings-position' => 'lleoliad: $1',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
