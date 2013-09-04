@@ -39,7 +39,8 @@ See also:
 	'listings-phone-symbol' => '{{Optional}}',
 	'listings-fax' => 'Used as label for "fax" output.
 {{Identical|Fax}}',
-	'listings-email' => 'Used as label for "email" output.',
+	'listings-email' => 'Used as label for "email" output.
+{{Identical|E-mail}}',
 	'listings-tollfree' => 'Used as label for "toll-free" output.',
 	'listings-checkin' => 'Parameters:
 * $1 - check-in
