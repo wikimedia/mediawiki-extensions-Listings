@@ -111,8 +111,10 @@ $messages['cs'] = array(
  */
 $messages['cy'] = array(
 	'listings-unknown' => 'Cyrchfan anhysbys',
+	'listings-phone' => 'ffôn',
 	'listings-fax' => 'ffacs',
 	'listings-email' => 'ebost',
+	'listings-tollfree' => 'am ddim',
 	'listings-position' => 'lleoliad: $1',
 );
 
