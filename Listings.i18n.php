@@ -110,6 +110,7 @@ $messages['cs'] = array(
  * @author Lloffiwr
  */
 $messages['cy'] = array(
+	'listings-desc' => 'Yn ychwanegu tagiau wrth restri mannau',
 	'listings-unknown' => 'Cyrchfan anhysbys',
 	'listings-phone' => 'ffôn',
 	'listings-fax' => 'ffacs',
