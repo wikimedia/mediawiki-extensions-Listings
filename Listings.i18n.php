@@ -116,6 +116,8 @@ $messages['cy'] = array(
 	'listings-fax' => 'ffacs',
 	'listings-email' => 'ebost',
 	'listings-tollfree' => 'am ddim',
+	'listings-checkin' => 'Amser cyrraedd cynharaf: $1',
+	'listings-checkout' => 'Amser gadael hwyraf: $1',
 	'listings-position' => 'lleoliad: $1',
 );
 
