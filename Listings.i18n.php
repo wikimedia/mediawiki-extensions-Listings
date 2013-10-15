@@ -527,14 +527,18 @@ $messages['roa-tara'] = array(
 
 /** Russian (русский)
  * @author DCamer
+ * @author Okras
  * @author ShinePhantom
  */
 $messages['ru'] = array(
+	'listings-desc' => 'Добавляет теги для перечисления мест',
 	'listings-unknown' => 'Неизвестное назначение',
 	'listings-phone' => 'телефон',
 	'listings-fax' => 'Факс',
 	'listings-email' => 'эл. почта',
 	'listings-tollfree' => 'бесплатно',
+	'listings-checkin' => 'Заезд: $1',
+	'listings-checkout' => 'отъезд: $1',
 	'listings-position' => 'позиция: $1',
 );
 
