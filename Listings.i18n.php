@@ -558,6 +558,7 @@ $messages['si'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Jopparn
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
@@ -566,6 +567,8 @@ $messages['sv'] = array(
 	'listings-fax' => 'fax',
 	'listings-email' => 'e-post',
 	'listings-tollfree' => 'avgiftsfri',
+	'listings-checkin' => 'Incheckning: $1',
+	'listings-checkout' => 'utcheckning: $1',
 	'listings-position' => 'position: $1',
 );
 
