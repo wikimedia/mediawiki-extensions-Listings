@@ -95,7 +95,7 @@ $messages['br'] = array(
 	'listings-position' => "lec'hiadur : $1",
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Vks
  */
 $messages['cs'] = array(
