@@ -182,13 +182,16 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Mjbmr
  */
 $messages['fa'] = array(
+	'listings-desc' => 'اضافه کردن برچسب‌ها برای مکان‌های فهرست‌',
 	'listings-unknown' => 'مقصد ناشناخته',
 	'listings-phone' => 'تلفن',
 	'listings-fax' => 'فکس',
 	'listings-email' => 'پست الکترونیکی',
+	'listings-position' => 'موقعیت: $1',
 );
 
 /** Finnish (suomi)
