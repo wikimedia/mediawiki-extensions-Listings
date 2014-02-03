@@ -192,6 +192,8 @@ $messages['fa'] = array(
 	'listings-fax' => 'فکس',
 	'listings-email' => 'پست الکترونیکی',
 	'listings-tollfree' => 'رایگان',
+	'listings-checkin' => 'وارد شدن: $1',
+	'listings-checkout' => 'خارج شدن: $1',
 	'listings-position' => 'موقعیت: $1',
 );
 
