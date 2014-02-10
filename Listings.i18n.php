@@ -183,6 +183,7 @@ $messages['et'] = array(
 
 /** Persian (فارسی)
  * @author Armin1392
+ * @author Ebraminio
  * @author Mjbmr
  */
 $messages['fa'] = array(
@@ -190,7 +191,7 @@ $messages['fa'] = array(
 	'listings-unknown' => 'مقصد ناشناخته',
 	'listings-phone' => 'تلفن',
 	'listings-fax' => 'فکس',
-	'listings-email' => 'پست الکترونیکی',
+	'listings-email' => 'رایانامه',
 	'listings-tollfree' => 'رایگان',
 	'listings-checkin' => 'وارد شدن: $1',
 	'listings-checkout' => 'خارج شدن: $1',
