@@ -481,6 +481,14 @@ $messages['nl'] = array(
 	'listings-position' => 'positie: $1',
 );
 
+/** Polish (polski)
+ * @author Chrumps
+ */
+$messages['pl'] = array(
+	'listings-phone' => 'telefon',
+	'listings-email' => 'e‐mail',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Borichèt
  * @author Dragonòt
