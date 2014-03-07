@@ -574,9 +574,11 @@ $messages['si'] = array(
 
 /** Swedish (svenska)
  * @author Jopparn
+ * @author Lokal Profil
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
+	'listings-desc' => 'Lägg till taggar för att lista platser',
 	'listings-unknown' => 'Okänd destination',
 	'listings-phone' => 'telefon',
 	'listings-fax' => 'fax',
