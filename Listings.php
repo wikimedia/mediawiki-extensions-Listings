@@ -24,10 +24,11 @@ $wgExtensionCredits['parserhook'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Listings',
 	'descriptionmsg' => 'listings-desc',
 	'author' => 'Roland Unger',
-	'version' => '1.1'
+	'version' => '1.2.0'
 );
 
-$dir = dirname( __FILE__ ) . '/';
+$dir = __DIR__ . '/';
+$wgMessagesDirs['Listings'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Listings'] = $dir . 'Listings.i18n.php';
 $wgAutoloadClasses['Listings'] = $dir . 'Listings.body.php';
 

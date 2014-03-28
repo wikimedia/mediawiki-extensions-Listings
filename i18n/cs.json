@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Vks"
+        ]
+    },
+    "listings-phone": "telefon",
+    "listings-fax": "fax",
+    "listings-email": "e-mail",
+    "listings-tollfree": "bezplatně",
+    "listings-position": "pozice: $1"
+}
