@@ -1,16 +1,16 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko"
-        ]
-    },
-    "listings-desc": "Ajouter les balises pour lister les emplacements",
-    "listings-unknown": "Destination inconnue",
-    "listings-phone": "tél.",
-    "listings-fax": "fax",
-    "listings-email": "email",
-    "listings-tollfree": "gratuit",
-    "listings-checkin": "Inscriptions: $1",
-    "listings-checkout": "contrôle: $1",
-    "listings-position": "situation: $1"
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"listings-desc": "Ajouter les balises pour lister les emplacements",
+	"listings-unknown": "Destination inconnue",
+	"listings-phone": "tél.",
+	"listings-fax": "fax",
+	"listings-email": "email",
+	"listings-tollfree": "gratuit",
+	"listings-checkin": "Inscriptions: $1",
+	"listings-checkout": "contrôle: $1",
+	"listings-position": "situation: $1"
 }

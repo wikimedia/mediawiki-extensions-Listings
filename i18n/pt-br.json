@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Luckas"
-        ]
-    },
-    "listings-position": "posição: $1"
+	"@metadata": {
+		"authors": [
+			"Luckas"
+		]
+	},
+	"listings-position": "posição: $1"
 }

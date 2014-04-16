@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Avjoska"
-        ]
-    },
-    "listings-phone": "telefon",
-    "listings-fax": "faks",
-    "listings-email": "e-post"
+	"@metadata": {
+		"authors": [
+			"Avjoska"
+		]
+	},
+	"listings-phone": "telefon",
+	"listings-fax": "faks",
+	"listings-email": "e-post"
 }

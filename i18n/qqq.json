@@ -1,17 +1,17 @@
 {
-    "@metadata": {
-        "authors": [
-            "Shirayuki"
-        ]
-    },
-    "listings-desc": "{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}",
-    "listings-unknown": "Used when the name is not specified, instead of name.",
-    "listings-phone": "Used as label for \"phone\" output.\n\nSee also:\n* {{msg-mw|Listings-phone-symbol|Optional message}}\n{{Identical|Phone}}",
-    "listings-phone-symbol": "{{Optional}}",
-    "listings-fax": "Used as label for \"fax\" output.\n{{Identical|Fax}}",
-    "listings-email": "Used as label for \"email\" output.\n{{Identical|E-mail}}",
-    "listings-tollfree": "Used as label for \"toll-free\" output.",
-    "listings-checkin": "Parameters:\n* $1 - check-in\nSee also:\n* {{msg-mw|Listings-checkout}}",
-    "listings-checkout": "Parameters:\n* $1 - check-out\nSee also:\n* {{msg-mw|Listings-checkin}}",
-    "listings-position": "Parameters:\n* $1 - {{msg-mw|listings-position-template}}\nAs the message {{msg-mw|listings-position-template}} is empty, this message is unused."
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"listings-desc": "{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}",
+	"listings-unknown": "Used when the name is not specified, instead of name.",
+	"listings-phone": "Used as label for \"phone\" output.\n\nSee also:\n* {{msg-mw|Listings-phone-symbol|Optional message}}\n{{Identical|Phone}}",
+	"listings-phone-symbol": "{{Optional}}",
+	"listings-fax": "Used as label for \"fax\" output.\n{{Identical|Fax}}",
+	"listings-email": "Used as label for \"email\" output.\n{{Identical|E-mail}}",
+	"listings-tollfree": "Used as label for \"toll-free\" output.",
+	"listings-checkin": "Parameters:\n* $1 - check-in\nSee also:\n* {{msg-mw|Listings-checkout}}",
+	"listings-checkout": "Parameters:\n* $1 - check-out\nSee also:\n* {{msg-mw|Listings-checkin}}",
+	"listings-position": "Parameters:\n* $1 - {{msg-mw|listings-position-template}}\nAs the message {{msg-mw|listings-position-template}} is empty, this message is unused."
 }

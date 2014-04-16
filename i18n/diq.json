@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Erdemaslancan"
-        ]
-    },
-    "listings-phone": "telefun",
-    "listings-fax": "feqs",
-    "listings-email": "e-posta",
-    "listings-position": "pozisyon: $1"
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan"
+		]
+	},
+	"listings-phone": "telefun",
+	"listings-fax": "feqs",
+	"listings-email": "e-posta",
+	"listings-position": "pozisyon: $1"
 }
