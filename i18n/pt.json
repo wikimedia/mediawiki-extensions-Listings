@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vitorvicentevalente"
+		]
+	},
+	"listings-unknown": "Destino desconhecido",
+	"listings-phone": "telefone",
+	"listings-fax": "fax",
+	"listings-email": "correio eletrónico"
+}
