@@ -203,12 +203,18 @@ class Listings {
 		}
 
 		// @fixme: a lot of localisation-unfriendly patchwork below
-		$out = Html::rawElement( 'strong', array(), $name );
+		$out = Html::element( 'strong', array(), $name );
 		if ( $url != '' ) {
-			$out = Html::rawElement( 'a',
-				array( 'href' => $url, 'class' => 'external text', 'rel' => 'nofollow', 'title' => $name ),
-				$out
+			$sanitizedHref = Sanitizer::validateAttributes(
+				array( 'href' => $url ),
+				array( 'href' )
 			);
+			if ( isset( $sanitizedHref['href'] ) ) {
+				$out = Html::rawElement( 'a',
+					$sanitizedHref + array( 'class' => 'external text', 'rel' => 'nofollow', 'title' => $name ),
+					$out
+				);
+			}
 		}
 		if ( $alt != '' ) {
 			// @todo FIXME: i18n issue (hard coded parentheses)
