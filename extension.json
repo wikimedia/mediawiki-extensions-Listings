@@ -1,0 +1,24 @@
+{
+	"name": "Listings",
+	"version": "1.2.0",
+	"author": "Roland Unger",
+	"url": "https://www.mediawiki.org/wiki/Extension:Listings",
+	"descriptionmsg": "listings-desc",
+	"type": "parserhook",
+	"ExtensionMessagesFiles": {
+		"Listings": "Listings.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"Listings::setupHooks"
+		]
+	},
+	"MessagesDirs": {
+		"Listings": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Listings": "Listings.body.php"
+	}
+}
