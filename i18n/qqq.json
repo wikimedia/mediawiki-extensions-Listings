@@ -3,10 +3,11 @@
 		"authors": [
 			"Shirayuki",
 			"Liuxinyu970226",
-			"Purodha"
+			"Purodha",
+			"Umherirrender"
 		]
 	},
-	"listings-desc": "{{desc|name=Listings|url=http://www.mediawiki.org/wiki/Extension:Listings}}",
+	"listings-desc": "{{desc|name=Listings|url=https://www.mediawiki.org/wiki/Extension:Listings}}",
 	"listings-unknown": "Used when the name is not specified, instead of name.",
 	"listings-phone": "Used as label for \"phone\" output.\n\nSee also:\n* {{msg-mw|Listings-phone-symbol|Optional message}}\n{{Identical|Phone}}",
 	"listings-phone-symbol": "{{Optional}}",
