@@ -1,33 +1,14 @@
 <?php
-/*
- * Adds listing parser functions for the Wikivoyage project
- *
- * @package MediaWiki
- * @subpackage Extensions
- *
- * @author Roland Unger
- * @copyright Copyright © 2007 - 2012 Roland Unger
- * v 1.03 of 2012/08/30
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
- *
- * v 1.02: is_numeric lat, long; communication device symbols
- * v 1.03: adapted to MW 1.20
- */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
+if ( function_exists( 'wfLoadExtension' ) ) {
+	wfLoadExtension( 'Listings' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['Listings'] = __DIR__ . '/i18n';
+	/* wfWarn(
+		'Deprecated PHP entry point used for Listings extension. Please use wfLoadExtension instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	); */
+	return true;
+} else {
+	die( 'This version of the Listings extension requires MediaWiki 1.25+' );
 }
-
-$wgExtensionCredits['parserhook'][] = array(
-	'path' => __FILE__,
-	'name' => 'Listings',
-	'url' => 'https://www.mediawiki.org/wiki/Extension:Listings',
-	'descriptionmsg' => 'listings-desc',
-	'author' => 'Roland Unger',
-	'version' => '1.2.0'
-);
-
-$wgMessagesDirs['Listings'] = __DIR__ . '/i18n';
-$wgAutoloadClasses['Listings'] = __DIR__ . '/Listings.body.php';
-
-$wgHooks['ParserFirstCallInit'][] = 'Listings::setupHooks';
