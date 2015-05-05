@@ -28,7 +28,6 @@ $wgExtensionCredits['parserhook'][] = array(
 );
 
 $wgMessagesDirs['Listings'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['Listings'] = __DIR__ . '/Listings.i18n.php';
 $wgAutoloadClasses['Listings'] = __DIR__ . '/Listings.body.php';
 
 $wgHooks['ParserFirstCallInit'][] = 'Listings::setupHooks';
