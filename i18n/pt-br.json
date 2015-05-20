@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas"
+			"Luckas",
+			"Araceletorres"
 		]
 	},
+	"listings-unknown": "Destino desconhecido",
+	"listings-phone": "telefone",
+	"listings-fax": "fax",
+	"listings-email": "e-mail",
 	"listings-position": "posição: $1"
 }
