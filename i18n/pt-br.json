@@ -5,9 +5,13 @@
 			"Araceletorres"
 		]
 	},
+	"listings-desc": "Adicionar etiquetas para lugares listados",
 	"listings-unknown": "Destino desconhecido",
 	"listings-phone": "telefone",
 	"listings-fax": "fax",
 	"listings-email": "e-mail",
+	"listings-tollfree": "grátis",
+	"listings-checkin": "Entrada: $1",
+	"listings-checkout": "saída: $1",
 	"listings-position": "posição: $1"
 }
