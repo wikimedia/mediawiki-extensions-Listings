@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Roberta F."
+			"Roberta F.",
+			"Bugoslav"
 		]
 	},
-	"listings-email": "e-pošta"
+	"listings-unknown": "Nepoznato odredište odnosno primatelj",
+	"listings-phone": "telefon",
+	"listings-fax": "telefaks",
+	"listings-email": "e-pošta",
+	"listings-tollfree": "besplatni telefonski broj"
 }
