@@ -10,7 +10,7 @@
 	"listings-fax": "Fax",
 	"listings-email": "<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">e-mail</i>",
 	"listings-tollfree": "koß nix",
-	"listings-checkin": "Erin jekumme: $1 <!--\nhttps://translatewiki.net/wiki/Thread:Support/Useless_documentation\n-->",
-	"listings-checkout": "eruß jejange öm $1 Uhr <!--  https://translatewiki.net/wiki/Thread:Support/About_MediaWiki:Listings-checkout/ksh_(3) -->",
+	"listings-checkin": "Erin jekumme öm$1 Uhr",
+	"listings-checkout": "eruß jejange öm $1 Uhr",
 	"listings-position": "Posizjuhn: $1"
 }
