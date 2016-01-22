@@ -19,7 +19,7 @@
 	"listings-tollfree": "Used as label for \"toll-free\" output.",
 	"listings-tollfree-symbol": "{{ignored}}",
 	"listings-checkin": "Parameters:\n* $1 - check-in, i.e. a check-in time of the hotels\nSee also:\n* {{msg-mw|Listings-checkout}}",
-	"listings-checkout": "Parameters:\n* $1 - Check-out-time of the hotels.\nSee also:\n* {{msg-mw|Listings-checkin}}",
+	"listings-checkout": "Parameters:\n* $1 - Latest check-out-time allowed by the hotels.\nSee also:\n* {{msg-mw|Listings-checkin}}",
 	"listings-position": "Parameters:\n* $1 - {{msg-mw|listings-position-template}}\nIf the message {{msg-mw|listings-position-template}} is empty, this message is unused.\n{{Identical|Position}}",
 	"listings-position-template": "{{ignored}}"
 }
