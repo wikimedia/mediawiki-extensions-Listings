@@ -5,5 +5,6 @@
 		]
 	},
 	"listings-phone": "telefon",
-	"listings-email": "e‐mail"
+	"listings-email": "e‐mail",
+	"listings-position": "położenie: $1"
 }
