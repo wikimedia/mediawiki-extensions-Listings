@@ -1,11 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Hamilton Abreu"
 		]
 	},
+	"listings-desc": "Adicionar etiquetas aos locais de destino",
 	"listings-unknown": "Destino desconhecido",
 	"listings-phone": "telefone",
 	"listings-fax": "fax",
-	"listings-email": "correio eletrónico"
+	"listings-email": "correio eletrónico",
+	"listings-tollfree": "gratuito",
+	"listings-checkin": "Entrada: $1",
+	"listings-checkout": "saída: $1",
+	"listings-position": "posição: $1"
 }
