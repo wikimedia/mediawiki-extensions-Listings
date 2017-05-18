@@ -2,13 +2,13 @@
 
 class Listings {
 	public static function setupHooks( Parser $parser ) {
-		$parser->setHook( 'buy',     array( 'Listings', 'buyListings'   ) );
-		$parser->setHook( 'do',      array( 'Listings', 'doListings'    ) );
-		$parser->setHook( 'drink',   array( 'Listings', 'drinkListings' ) );
-		$parser->setHook( 'eat',     array( 'Listings', 'eatListings'   ) );
-		$parser->setHook( 'listing', array( 'Listings', 'otherlistings' ) );
-		$parser->setHook( 'see',     array( 'Listings', 'seeListings'   ) );
-		$parser->setHook( 'sleep',   array( 'Listings', 'sleepListings' ) );
+		$parser->setHook( 'buy', [ 'Listings', 'buyListings' ] );
+		$parser->setHook( 'do', [ 'Listings', 'doListings' ] );
+		$parser->setHook( 'drink', [ 'Listings', 'drinkListings' ] );
+		$parser->setHook( 'eat', [ 'Listings', 'eatListings' ] );
+		$parser->setHook( 'listing', [ 'Listings', 'otherlistings' ] );
+		$parser->setHook( 'see', [ 'Listings', 'seeListings' ] );
+		$parser->setHook( 'sleep', [ 'Listings', 'sleepListings' ] );
 
 		return true;
 	}
@@ -93,7 +93,8 @@ class Listings {
 	private static function listingsTag( $aType, $input, $args, $parser ) {
 
 		/*
-		 * if a {{listings}} template exists, feed tag name and parameter list to template verbatim and exit
+		 * if a {{listings}} template exists,
+		 * feed tag name and parameter list to template verbatim and exit
 		 */
 		$ltemplate = '';
 		if ( !wfMessage( 'listings-template' )->inContentLanguage()->isDisabled() ) {
@@ -203,15 +204,15 @@ class Listings {
 		}
 
 		// @fixme: a lot of localisation-unfriendly patchwork below
-		$out = Html::element( 'strong', array(), $name );
+		$out = Html::element( 'strong', [], $name );
 		if ( $url != '' ) {
 			$sanitizedHref = Sanitizer::validateAttributes(
-				array( 'href' => $url ),
-				array( 'href' )
+				[ 'href' => $url ],
+				[ 'href' ]
 			);
 			if ( isset( $sanitizedHref['href'] ) ) {
 				$out = Html::rawElement( 'a',
-					$sanitizedHref + array( 'class' => 'external text', 'rel' => 'nofollow', 'title' => $name ),
+					$sanitizedHref + [ 'class' => 'external text', 'rel' => 'nofollow', 'title' => $name ],
 					$out
 				);
 			}
@@ -236,27 +237,39 @@ class Listings {
 			}
 		}
 
-		$phoneSymbol = $parser->internalParse( wfMessage( 'listings-phone-symbol' )->inContentLanguage()->text() );
+		$phoneSymbol = $parser->internalParse(
+			wfMessage( 'listings-phone-symbol' )->inContentLanguage()->text() );
 		if ( $phoneSymbol != '' ) {
-			$phoneSymbol = '<abbr title="' . wfMessage( 'listings-phone' )->inContentLanguage()->escaped() . '">' . $phoneSymbol . '</abbr>';
+			$phoneSymbol = '<abbr title="' .
+				wfMessage( 'listings-phone' )->inContentLanguage()->escaped() .
+				'">' . $phoneSymbol . '</abbr>';
 		} else {
 			$phoneSymbol = wfMessage( 'listings-phone' )->inContentLanguage()->escaped();
 		}
-		$faxSymbol = $parser->internalParse( wfMessage( 'listings-fax-symbol' )->inContentLanguage()->text() );
+		$faxSymbol = $parser->internalParse(
+			wfMessage( 'listings-fax-symbol' )->inContentLanguage()->text() );
 		if ( $faxSymbol != '' ) {
-			$faxSymbol = '<abbr title="' . wfMessage( 'listings-fax' )->inContentLanguage()->escaped() . '">' . $faxSymbol . '</abbr>';
+			$faxSymbol = '<abbr title="' .
+				wfMessage( 'listings-fax' )->inContentLanguage()->escaped() .
+				'">' . $faxSymbol . '</abbr>';
 		} else {
 			$faxSymbol = wfMessage( 'listings-fax' )->inContentLanguage()->escaped();
 		}
-		$emailSymbol = $parser->internalParse( wfMessage( 'listings-email-symbol' )->inContentLanguage()->text() );
+		$emailSymbol = $parser->internalParse(
+			wfMessage( 'listings-email-symbol' )->inContentLanguage()->text() );
 		if ( $emailSymbol != '' ) {
-			$emailSymbol = '<abbr title="' . wfMessage( 'listings-email' )->inContentLanguage()->escaped() . '">' . $emailSymbol . '</abbr>';
+			$emailSymbol = '<abbr title="' .
+				wfMessage( 'listings-email' )->inContentLanguage()->escaped() .
+				'">' . $emailSymbol . '</abbr>';
 		} else {
 			$emailSymbol = wfMessage( 'listings-email' )->inContentLanguage()->escaped();
 		}
-		$tollfreeSymbol = $parser->internalParse( wfMessage( 'listings-tollfree-symbol' )->inContentLanguage()->text() );
+		$tollfreeSymbol = $parser->internalParse(
+			wfMessage( 'listings-tollfree-symbol' )->inContentLanguage()->text() );
 		if ( $tollfreeSymbol != '' ) {
-			$tollfreeSymbol = '<abbr title="' . wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped() . '">' . $tollfreeSymbol . '</abbr>';
+			$tollfreeSymbol = '<abbr title="' .
+				wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped() .
+				'">' . $tollfreeSymbol . '</abbr>';
 		} else {
 			$tollfreeSymbol = wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped();
 		}
@@ -276,7 +289,7 @@ class Listings {
 		if ( $email != '' ) {
 			// @todo FIXME: i18n issue (hard comma list, coded colon/space)
 			$out .= ', ' . $emailSymbol . ': '
-				. Html::element( 'a', array( 'class' => 'email', 'href' => "mailto:$email" ), $email );
+				. Html::element( 'a', [ 'class' => 'email', 'href' => "mailto:$email" ], $email );
 		}
 		// @todo FIXME: i18n issue (hard coded text)
 		$out .= '. ';
