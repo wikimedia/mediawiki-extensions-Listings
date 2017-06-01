@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
 	"listings-desc": "Ajouter les balises pour lister les emplacements",
 	"listings-unknown": "Destination inconnue",
 	"listings-phone": "tél.",
 	"listings-fax": "fax",
-	"listings-email": "email",
+	"listings-email": "courriel",
 	"listings-tollfree": "gratuit",
 	"listings-checkin": "Inscriptions: $1",
 	"listings-checkout": "contrôle: $1",
