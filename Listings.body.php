@@ -91,7 +91,6 @@ class Listings {
 	 * @return string
 	 */
 	private static function listingsTag( $aType, $input, $args, $parser ) {
-
 		/*
 		 * if a {{listings}} template exists,
 		 * feed tag name and parameter list to template verbatim and exit
