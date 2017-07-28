@@ -3,6 +3,7 @@
 	"version": "1.2.0",
 	"author": "Roland Unger",
 	"url": "https://www.mediawiki.org/wiki/Extension:Listings",
+	"license-name": "GPL-2.0+",
 	"descriptionmsg": "listings-desc",
 	"type": "parserhook",
 	"Hooks": {
