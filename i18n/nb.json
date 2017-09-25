@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"listings-unknown": "Ukjent destinasjon",
+	"listings-phone": "telefon",
+	"listings-fax": "faks",
+	"listings-email": "e-post",
+	"listings-tollfree": "avgiftsfri",
+	"listings-checkin": "Innsjekking: $1",
+	"listings-checkout": "utsjekking: $1",
+	"listings-position": "posisjon: $1"
+}
