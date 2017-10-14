@@ -14,9 +14,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function buyListings( $input, array $args, $parser ) {
@@ -24,9 +24,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function doListings( $input, array $args, $parser ) {
@@ -34,9 +34,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function drinkListings( $input, array $args, $parser ) {
@@ -44,9 +44,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function eatListings( $input, array $args, $parser ) {
@@ -54,9 +54,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function otherListings( $input, array $args, $parser ) {
@@ -64,9 +64,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function seeListings( $input, array $args, $parser ) {
@@ -74,9 +74,9 @@ class Listings {
 	}
 
 	/**
-	 * @param $input
-	 * @param $args array
-	 * @param $parser Parser
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	public static function sleepListings( $input, array $args, $parser ) {
@@ -84,10 +84,10 @@ class Listings {
 	}
 
 	/**
-	 * @param $aType
-	 * @param $input
-	 * @param $args
-	 * @param $parser Parser
+	 * @param string $aType
+	 * @param string $input
+	 * @param array $args
+	 * @param Parser $parser
 	 * @return string
 	 */
 	private static function listingsTag( $aType, $input, $args, $parser ) {
