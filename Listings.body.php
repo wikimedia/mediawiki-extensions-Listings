@@ -193,11 +193,13 @@ class Listings {
 		$position = '';
 		if ( $lat < 361 && $long < 361 ) { // @fixme: incorrect validation
 			if ( !wfMessage( 'listings-position-template' )->inContentLanguage()->isDisabled() ) {
-				$position = wfMessage( 'listings-position-template', $lat, $long )->inContentLanguage()->text();
-				if ( $position != '' ) {
-					$position = $parser->internalParse( '{{' . $position . '}}' );
+				$positionTemplate = wfMessage( 'listings-position-template', $lat, $long )
+					->inContentLanguage()->text();
+				if ( $positionTemplate != '' ) {
+					$parsedTemplate = $parser->internalParse( '{{' . $positionTemplate . '}}' );
 					// @todo FIXME: i18n issue (hard coded colon/space)
-					$position = wfMessage( 'listings-position', $position )->inContentLanguage()->text();
+					$position = wfMessage( 'listings-position' )->inContentLanguage()
+						->rawParams( $parsedTemplate )->escaped();
 				}
 			}
 		}
