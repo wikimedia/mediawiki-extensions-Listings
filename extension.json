@@ -17,7 +17,7 @@
 		]
 	},
 	"AutoloadClasses": {
-		"Listings": "Listings.body.php"
+		"Listings": "includes/Listings.php"
 	},
 	"manifest_version": 1
 }
