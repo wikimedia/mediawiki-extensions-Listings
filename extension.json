@@ -7,9 +7,7 @@
 	"descriptionmsg": "listings-desc",
 	"type": "parserhook",
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"Listings::setupHooks"
-		]
+		"ParserFirstCallInit": "Listings::setupHooks"
 	},
 	"MessagesDirs": {
 		"Listings": [
