@@ -1,6 +1,12 @@
 <?php
 
 class Listings {
+
+	/**
+	 * Register parser hooks
+	 *
+	 * @param Parser $parser
+	 */
 	public static function setupHooks( Parser $parser ) {
 		$parser->setHook( 'buy', [ 'Listings', 'buyListings' ] );
 		$parser->setHook( 'do', [ 'Listings', 'doListings' ] );
@@ -9,8 +15,6 @@ class Listings {
 		$parser->setHook( 'listing', [ 'Listings', 'otherlistings' ] );
 		$parser->setHook( 'see', [ 'Listings', 'seeListings' ] );
 		$parser->setHook( 'sleep', [ 'Listings', 'sleepListings' ] );
-
-		return true;
 	}
 
 	/**
