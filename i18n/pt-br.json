@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luckas",
 			"Araceletorres",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Luckas"
 		]
 	},
 	"listings-desc": "Adicionar etiquetas para lugares listados",
