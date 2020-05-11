@@ -6,6 +6,9 @@
 	"license-name": "GPL-2.0-or-later",
 	"descriptionmsg": "listings-desc",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"Hooks": {
 		"ParserFirstCallInit": "Listings::setupHooks"
 	},
@@ -17,5 +20,5 @@
 	"AutoloadClasses": {
 		"Listings": "includes/Listings.php"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
