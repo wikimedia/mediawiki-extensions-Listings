@@ -213,7 +213,7 @@ class Listings {
 		if ( $url != '' ) {
 			$sanitizedHref = Sanitizer::validateAttributes(
 				[ 'href' => $url ],
-				[ 'href' ]
+				[ 'href' => true ]
 			);
 			if ( isset( $sanitizedHref['href'] ) ) {
 				$out = Html::rawElement( 'a',
