@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Urhixidur"
+			"Urhixidur",
+			"Verdy p"
 		]
 	},
 	"listings-desc": "Ajouter les balises pour lister les emplacements",
 	"listings-unknown": "Destination inconnue",
 	"listings-phone": "tél.",
+	"listings-phone-symbol": "☎",
 	"listings-fax": "fax",
 	"listings-email": "courriel",
 	"listings-tollfree": "gratuit",
