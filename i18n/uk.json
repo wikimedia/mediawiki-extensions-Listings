@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Andriykopanytsia",
-			"Base"
+			"Base",
+			"DDPAT"
 		]
 	},
 	"listings-desc": "Додати теґи для переліку місць",
 	"listings-unknown": "Невідоме місце",
 	"listings-phone": "телефон",
+	"listings-phone-symbol": "☎",
 	"listings-fax": "факс",
 	"listings-email": "електронна пошта",
 	"listings-tollfree": "безкоштовно",
