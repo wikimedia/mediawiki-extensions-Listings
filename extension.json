@@ -10,15 +10,15 @@
 		"MediaWiki": ">= 1.34.0"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "Listings::setupHooks"
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Listings\\Listings::setupHooks"
 	},
 	"MessagesDirs": {
 		"Listings": [
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"Listings": "includes/Listings.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Listings\\": "includes/"
 	},
 	"manifest_version": 2
 }

@@ -1,5 +1,11 @@
 <?php
 
+namespace MediaWiki\Extension\Listings;
+
+use Html;
+use Parser;
+use Sanitizer;
+
 class Listings {
 
 	/**
@@ -8,13 +14,13 @@ class Listings {
 	 * @param Parser $parser
 	 */
 	public static function setupHooks( Parser $parser ) {
-		$parser->setHook( 'buy', [ 'Listings', 'buyListings' ] );
-		$parser->setHook( 'do', [ 'Listings', 'doListings' ] );
-		$parser->setHook( 'drink', [ 'Listings', 'drinkListings' ] );
-		$parser->setHook( 'eat', [ 'Listings', 'eatListings' ] );
-		$parser->setHook( 'listing', [ 'Listings', 'otherlistings' ] );
-		$parser->setHook( 'see', [ 'Listings', 'seeListings' ] );
-		$parser->setHook( 'sleep', [ 'Listings', 'sleepListings' ] );
+		$parser->setHook( 'buy', [ self::class, 'buyListings' ] );
+		$parser->setHook( 'do', [ self::class, 'doListings' ] );
+		$parser->setHook( 'drink', [ self::class, 'drinkListings' ] );
+		$parser->setHook( 'eat', [ self::class, 'eatListings' ] );
+		$parser->setHook( 'listing', [ self::class, 'otherlistings' ] );
+		$parser->setHook( 'see', [ self::class, 'seeListings' ] );
+		$parser->setHook( 'sleep', [ self::class, 'sleepListings' ] );
 	}
 
 	/**
@@ -109,8 +115,7 @@ class Listings {
 				$inputtext .= '|' . $key . '=' . $value;
 			}
 			$inputtext .= '|' . $input . '}}';
-			$out = $parser->internalParse( $inputtext );
-			return $out;
+			return $parser->internalParse( $inputtext );
 		}
 
 		/*
