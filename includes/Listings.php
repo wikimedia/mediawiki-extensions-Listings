@@ -105,17 +105,17 @@ class Listings {
 		 * if a {{listings}} template exists,
 		 * feed tag name and parameter list to template verbatim and exit
 		 */
-		$ltemplate = '';
+		$listingsTemplate = '';
 		if ( !wfMessage( 'listings-template' )->inContentLanguage()->isDisabled() ) {
-			$ltemplate = wfMessage( 'listings-template' )->inContentLanguage()->text();
+			$listingsTemplate = wfMessage( 'listings-template' )->inContentLanguage()->text();
 		}
-		if ( $ltemplate != '' ) {
-			$inputtext = '{{' . $ltemplate . '|type=' . $aType;
+		if ( $listingsTemplate != '' ) {
+			$inputText = '{{' . $listingsTemplate . '|type=' . $aType;
 			foreach ( $args as $key => $value ) {
-				$inputtext .= '|' . $key . '=' . $value;
+				$inputText .= '|' . $key . '=' . $value;
 			}
-			$inputtext .= '|' . $input . '}}';
-			return $parser->internalParse( $inputtext );
+			$inputText .= '|' . $input . '}}';
+			return $parser->internalParse( $inputText );
 		}
 
 		/*
@@ -149,9 +149,9 @@ class Listings {
 			$phone = '';
 		}
 		if ( isset( $args['tollfree'] ) ) {
-			$tollfree = $args['tollfree'];
+			$tollFree = $args['tollfree'];
 		} else {
-			$tollfree = '';
+			$tollFree = '';
 		}
 		if ( isset( $args['email'] ) ) {
 			$email = $args['email'];
@@ -200,16 +200,17 @@ class Listings {
 		}
 
 		$position = '';
-		if ( $lat < 361 && $long < 361 ) { // @fixme: incorrect validation
-			if ( !wfMessage( 'listings-position-template' )->inContentLanguage()->isDisabled() ) {
-				$positionTemplate = wfMessage( 'listings-position-template', $lat, $long )
-					->inContentLanguage()->text();
-				if ( $positionTemplate != '' ) {
-					$parsedTemplate = $parser->internalParse( '{{' . $positionTemplate . '}}' );
-					// @todo FIXME: i18n issue (hard coded colon/space)
-					$position = wfMessage( 'listings-position' )->inContentLanguage()
-						->rawParams( $parsedTemplate )->escaped();
-				}
+		// @fixme: incorrect validation
+		if ( $lat < 361 && $long < 361 &&
+			!wfMessage( 'listings-position-template' )->inContentLanguage()->isDisabled()
+		) {
+			$positionTemplate = wfMessage( 'listings-position-template', $lat, $long )
+				->inContentLanguage()->text();
+			if ( $positionTemplate != '' ) {
+				$parsedTemplate = $parser->internalParse( '{{' . $positionTemplate . '}}' );
+				// @todo FIXME: i18n issue (hard coded colon/space)
+				$position = wfMessage( 'listings-position' )->inContentLanguage()
+					->rawParams( $parsedTemplate )->escaped();
 			}
 		}
 
@@ -274,22 +275,22 @@ class Listings {
 		} else {
 			$emailSymbol = wfMessage( 'listings-email' )->inContentLanguage()->escaped();
 		}
-		$tollfreeSymbol = $parser->internalParse(
+		$tollFreeSymbol = $parser->internalParse(
 			wfMessage( 'listings-tollfree-symbol' )->inContentLanguage()->text() );
-		if ( $tollfreeSymbol != '' ) {
-			$tollfreeSymbol = '<abbr title="' .
+		if ( $tollFreeSymbol != '' ) {
+			$tollFreeSymbol = '<abbr title="' .
 				wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped() .
-				'">' . $tollfreeSymbol . '</abbr>';
+				'">' . $tollFreeSymbol . '</abbr>';
 		} else {
-			$tollfreeSymbol = wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped();
+			$tollFreeSymbol = wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped();
 		}
 
-		if ( ( $phone != '' ) || ( $tollfree != '' ) ) {
+		if ( ( $phone != '' ) || ( $tollFree != '' ) ) {
 			// @todo FIXME: i18n issue (hard coded comma list, space)
 			$out .= ', ' . $phoneSymbol . ' ' . htmlspecialchars( $phone );
-			if ( $tollfree != '' ) {
+			if ( $tollFree != '' ) {
 				// @todo FIXME: i18n issue (hard coded parentheses)
-				$out .= ' (' . $tollfreeSymbol . ': ' . htmlspecialchars( $tollfree ) . ')';
+				$out .= ' (' . $tollFreeSymbol . ': ' . htmlspecialchars( $tollFree ) . ')';
 			}
 		}
 		if ( $fax != '' ) {
@@ -326,8 +327,6 @@ class Listings {
 			$out .= htmlspecialchars( $price ) . '. ';
 		}
 
-		$out .= $parser->internalParse( $input );
-
-		return $out;
+		return $out . $parser->internalParse( $input );
 	}
 }
