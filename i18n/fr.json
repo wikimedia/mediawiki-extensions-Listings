@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"McDutchie",
 			"Urhixidur",
 			"Verdy p"
 		]
@@ -13,7 +14,7 @@
 	"listings-fax": "fax",
 	"listings-email": "courriel",
 	"listings-tollfree": "gratuit",
-	"listings-checkin": "Inscriptions: $1",
-	"listings-checkout": "contrôle: $1",
+	"listings-checkin": "Enregistrement: $1",
+	"listings-checkout": "départ: $1",
 	"listings-position": "situation: $1"
 }
