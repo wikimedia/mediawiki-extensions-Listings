@@ -14,7 +14,7 @@
 	"listings-fax": "fax",
 	"listings-email": "courriel",
 	"listings-tollfree": "gratuit",
-	"listings-checkin": "Enregistrement: $1",
-	"listings-checkout": "départ: $1",
+	"listings-checkin": "Arrivée : $1",
+	"listings-checkout": "Départ : $1",
 	"listings-position": "situation: $1"
 }
