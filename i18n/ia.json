@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"listings-desc": "Adder etiquettas pro listar locos",
+	"listings-unknown": "Destination incognite",
+	"listings-phone": "telephono",
+	"listings-fax": "fax",
+	"listings-email": "e-mail",
+	"listings-tollfree": "gratuite",
+	"listings-checkin": "Registration: $1",
+	"listings-checkout": "Partita: $1",
+	"listings-position": "Position: $1"
+}
