@@ -3,7 +3,8 @@
 		"authors": [
 			"Gomoko",
 			"Urhixidur",
-			"Verdy p"
+			"Verdy p",
+			"McDutchie"
 		]
 	},
 	"listings-desc": "Ajouter les balises pour lister les emplacements",
@@ -13,7 +14,7 @@
 	"listings-fax": "fax",
 	"listings-email": "courriel",
 	"listings-tollfree": "gratuit",
-	"listings-checkin": "Inscriptions: $1",
-	"listings-checkout": "contrôle: $1",
+	"listings-checkin": "Arrivée : $1",
+	"listings-checkout": "Départ : $1",
 	"listings-position": "situation: $1"
 }
