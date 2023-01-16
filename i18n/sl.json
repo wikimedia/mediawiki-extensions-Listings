@@ -4,5 +4,13 @@
 			"Eleassar"
 		]
 	},
-	"listings-email": "e-pošta"
+	"listings-desc": "Doda oznake za navedbo lokacij",
+	"listings-unknown": "Neznan cilj",
+	"listings-phone": "telefon",
+	"listings-fax": "faks",
+	"listings-email": "e-pošta",
+	"listings-tollfree": "brezplačno",
+	"listings-checkin": "Prijava: $1",
+	"listings-checkout": "Odjava: $1",
+	"listings-position": "položaj: $1"
 }
