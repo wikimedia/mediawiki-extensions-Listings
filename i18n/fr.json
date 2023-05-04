@@ -13,8 +13,8 @@
 	"listings-phone-symbol": "☎",
 	"listings-fax": "fax",
 	"listings-email": "courriel",
-	"listings-tollfree": "gratuit",
+	"listings-tollfree": "appel gratuit",
 	"listings-checkin": "Arrivée : $1",
 	"listings-checkout": "Départ : $1",
-	"listings-position": "situation: $1"
+	"listings-position": "situation : $1"
 }
