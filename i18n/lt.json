@@ -5,8 +5,12 @@
 			"Nokeoo"
 		]
 	},
+	"listings-desc": "Prideda žymes vietų nurodymui",
+	"listings-unknown": "Nežinomas tikslas",
 	"listings-phone": "telefonas",
 	"listings-fax": "faksas",
 	"listings-email": "el. paštas",
+	"listings-checkin": "Atvykimas: $1",
+	"listings-checkout": "išvykimas: $1",
 	"listings-position": "pareigos: $1"
 }
