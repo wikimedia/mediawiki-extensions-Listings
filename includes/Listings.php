@@ -3,17 +3,18 @@
 namespace MediaWiki\Extension\Listings;
 
 use Html;
+use MediaWiki\Hook\ParserFirstCallInitHook;
 use Parser;
 use Sanitizer;
 
-class Listings {
+class Listings implements ParserFirstCallInitHook {
 
 	/**
 	 * Register parser hooks
 	 *
 	 * @param Parser $parser
 	 */
-	public static function setupHooks( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		$parser->setHook( 'buy', [ self::class, 'buyListings' ] );
 		$parser->setHook( 'do', [ self::class, 'doListings' ] );
 		$parser->setHook( 'drink', [ self::class, 'drinkListings' ] );

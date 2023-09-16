@@ -10,7 +10,12 @@
 		"MediaWiki": ">= 1.41"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "MediaWiki\\Extension\\Listings\\Listings::setupHooks"
+		"ParserFirstCallInit": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\Listings\\Listings"
+		}
 	},
 	"MessagesDirs": {
 		"Listings": [
