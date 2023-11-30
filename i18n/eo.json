@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ziko"
+		]
+	},
+	"listings-desc": "Aldoni etikedojn por listigi lokojn",
+	"listings-unknown": "Nekonata cel-loko",
+	"listings-phone": "telefono",
+	"listings-fax": "fakso",
+	"listings-email": "Retpoŝto",
+	"listings-tollfree": "senpaga",
+	"listings-checkin": "Enregistriĝo: $1",
+	"listings-checkout": "eliro: $1",
+	"listings-position": "pozicio: $1"
+}
