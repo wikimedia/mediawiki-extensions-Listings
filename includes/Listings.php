@@ -127,7 +127,7 @@ class Listings implements ParserFirstCallInitHook {
 		if ( !wfMessage( 'listings-template' )->inContentLanguage()->isDisabled() ) {
 			$listingsTemplate = wfMessage( 'listings-template' )->inContentLanguage()->text();
 		}
-		if ( $listingsTemplate != '' ) {
+		if ( $listingsTemplate !== '' ) {
 			$inputText = '{{' . $listingsTemplate . '|type=' . $aType;
 			foreach ( $args as $key => $value ) {
 				$inputText .= '|' . $key . '=' . $value;
@@ -141,30 +141,17 @@ class Listings implements ParserFirstCallInitHook {
 		 */
 
 		// @todo Should the args be made safe HTML?
-		$name = $args['name'] ?? wfMessage( 'listings-unknown' )->inContentLanguage()->text();
-		$alt = isset( $args['alt'] ) ? $parser->internalParse( $args['alt'] ) : '';
-		$address = isset( $args['address'] ) ? $parser->internalParse( $args['address'] ) : '';
-		$directions = isset( $args['directions'] ) ? $parser->internalParse( $args['directions'] ) : '';
-		$phone = $args['phone'] ?? '';
-		$tollFree = $args['tollfree'] ?? '';
-		$email = $args['email'] ?? '';
-		$fax = $args['fax'] ?? '';
-		$url = $args['url'] ?? '';
-		$hours = $args['hours'] ?? '';
-		$price = $args['price'] ?? '';
-		$checkin = $args['checkin'] ?? '';
-		$checkout = $args['checkout'] ?? '';
-		$lat = ( isset( $args['lat'] ) && is_numeric( $args['lat'] ) ) ? $args['lat'] : 361;
-		$long = ( isset( $args['long'] ) && is_numeric( $args['long'] ) ) ? $args['long'] : 361;
 
 		$position = '';
+		$lat = ( isset( $args['lat'] ) && is_numeric( $args['lat'] ) ) ? $args['lat'] : 361;
+		$long = ( isset( $args['long'] ) && is_numeric( $args['long'] ) ) ? $args['long'] : 361;
 		// @fixme: incorrect validation
 		if ( $lat < 361 && $long < 361 &&
 			!wfMessage( 'listings-position-template' )->inContentLanguage()->isDisabled()
 		) {
 			$positionTemplate = wfMessage( 'listings-position-template', $lat, $long )
 				->inContentLanguage()->text();
-			if ( $positionTemplate != '' ) {
+			if ( $positionTemplate !== '' ) {
 				$parsedTemplate = $parser->internalParse( '{{' . $positionTemplate . '}}' );
 				// @todo FIXME: i18n issue (hard coded colon/space)
 				$position = wfMessage( 'listings-position' )->inContentLanguage()
@@ -173,8 +160,11 @@ class Listings implements ParserFirstCallInitHook {
 		}
 
 		// @fixme: a lot of localisation-unfriendly patchwork below
+		$name = $args['name'] ?? wfMessage( 'listings-unknown' )->inContentLanguage()->text();
 		$out = Html::element( 'strong', [], $name );
-		if ( $url != '' ) {
+
+		$url = $args['url'] ?? '';
+		if ( $url !== '' ) {
 			$sanitizedHref = Sanitizer::validateAttributes(
 				[ 'href' => $url ],
 				[ 'href' => true ]
@@ -186,44 +176,54 @@ class Listings implements ParserFirstCallInitHook {
 				);
 			}
 		}
-		if ( $alt != '' ) {
+
+		$alt = isset( $args['alt'] ) ? $parser->internalParse( $args['alt'] ) : '';
+		if ( $alt !== '' ) {
 			// @todo FIXME: i18n issue (hard coded parentheses)
 			$out .= ' (<em>' . $alt . '</em>)';
 		}
-		if ( ( $address != '' ) || ( $directions != '' ) || ( $position != '' ) ) {
+
+		$address = isset( $args['address'] ) ? $parser->internalParse( $args['address'] ) : '';
+		$directions = isset( $args['directions'] ) ? $parser->internalParse( $args['directions'] ) : '';
+		if ( ( $address !== '' ) || ( $directions !== '' ) || ( $position !== '' ) ) {
 			$out .= ', ' . $address;
-			if ( ( $directions != '' ) || ( $position != '' ) ) {
+			if ( ( $directions !== '' ) || ( $position !== '' ) ) {
 				// @todo FIXME: i18n issue (hard coded parentheses)
 				$out .= ' (<em>' . $directions;
-				if ( ( $directions != '' ) && ( $position != '' ) ) {
+				if ( ( $directions !== '' ) && ( $position !== '' ) ) {
 					// @todo FIXME: i18n issue (hard coded comma list or list to text)
 					$out .= ', ';
 				}
-				if ( $position != '' ) {
+				if ( $position !== '' ) {
 					$out .= $position;
 				}
 				$out .= '</em>)';
 			}
 		}
 
-		$phoneSymbol = self::getParsedSymbol( 'phone' );
-		$faxSymbol = self::getParsedSymbol( 'fax' );
-		$emailSymbol = self::getParsedSymbol( 'email' );
-		$tollFreeSymbol = self::getParsedSymbol( 'tollfree' );
-
-		if ( ( $phone != '' ) || ( $tollFree != '' ) ) {
+		$phone = $args['phone'] ?? '';
+		$tollFree = $args['tollfree'] ?? '';
+		if ( ( $phone !== '' ) || ( $tollFree !== '' ) ) {
+			$phoneSymbol = self::getParsedSymbol( 'phone' );
 			// @todo FIXME: i18n issue (hard coded comma list, space)
 			$out .= ', ' . $phoneSymbol . ' ' . htmlspecialchars( $phone );
-			if ( $tollFree != '' ) {
+			if ( $tollFree !== '' ) {
+				$tollFreeSymbol = self::getParsedSymbol( 'tollfree' );
 				// @todo FIXME: i18n issue (hard coded parentheses)
 				$out .= ' (' . $tollFreeSymbol . ': ' . htmlspecialchars( $tollFree ) . ')';
 			}
 		}
-		if ( $fax != '' ) {
+
+		$fax = $args['fax'] ?? '';
+		if ( $fax !== '' ) {
+			$faxSymbol = self::getParsedSymbol( 'fax' );
 			// @todo FIXME: i18n issue (hard coded comma list, colon/space)
 			$out .= ', ' . $faxSymbol . ': ' . htmlspecialchars( $fax );
 		}
-		if ( $email != '' ) {
+
+		$email = $args['email'] ?? '';
+		if ( $email !== '' ) {
+			$emailSymbol = self::getParsedSymbol( 'email' );
 			// @todo FIXME: i18n issue (hard comma list, coded colon/space)
 			$out .= ', ' . $emailSymbol . ': '
 				. Html::element( 'a', [ 'class' => 'email', 'href' => "mailto:$email" ], $email );
@@ -231,24 +231,30 @@ class Listings implements ParserFirstCallInitHook {
 		// @todo FIXME: i18n issue (hard coded text)
 		$out .= '. ';
 
-		if ( $hours != '' ) {
+		$hours = $args['hours'] ?? '';
+		if ( $hours !== '' ) {
 			$out .= htmlspecialchars( $hours ) . '. ';
 		}
-		if ( ( $checkin != '' ) || ( $checkout != '' ) ) {
-			if ( $checkin != '' ) {
+
+		$checkin = $args['checkin'] ?? '';
+		$checkout = $args['checkout'] ?? '';
+		if ( ( $checkin !== '' ) || ( $checkout !== '' ) ) {
+			if ( $checkin !== '' ) {
 				$out .= wfMessage( 'listings-checkin', $checkin )->inContentLanguage()->escaped();
-				if ( $checkout != '' ) {
+				if ( $checkout !== '' ) {
 					// @todo FIXME: i18n issue (hard coded comma list)
 					$out .= ', ';
 				}
 			}
-			if ( $checkout != '' ) {
+			if ( $checkout !== '' ) {
 				$out .= wfMessage( 'listings-checkout', $checkout )->inContentLanguage()->escaped();
 			}
 			// @todo FIXME: i18n issue (hard coded wut?)
 			$out .= '. ';
 		}
-		if ( $price != '' ) {
+
+		$price = $args['price'] ?? '';
+		if ( $price !== '' ) {
 			// @todo FIXME: i18n issue (hard coded text)
 			$out .= htmlspecialchars( $price ) . '. ';
 		}
