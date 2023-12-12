@@ -95,6 +95,23 @@ class Listings implements ParserFirstCallInitHook {
 	}
 
 	/**
+	 * This method handles messages for phone, fax, tollfree, email
+	 * and processes the following messages:
+	 * - listings-phone, listings-phone-symbol
+	 * - listings-fax, listings-fax-symbol
+	 * - listings-tollfree, listings-tollfree-symbol
+	 * - listings-email, listings-email-symbol
+	 *
+	 * @param string $symbolType
+	 * @return string
+	 */
+	private static function getParsedSymbol( string $symbolType ): string {
+		$symbolType = wfMessage( "listings-$symbolType" )->inContentLanguage()->escaped();
+		$symbol = wfMessage( "listings-$symbolType-symbol" )->inContentLanguage()->parse();
+		return $symbol !== '' ? "<abbr title='$symbolType'>$symbol</abbr>" : $symbolType;
+	}
+
+	/**
 	 * @param string $aType
 	 * @param string $input
 	 * @param array $args
@@ -124,81 +141,21 @@ class Listings implements ParserFirstCallInitHook {
 		 */
 
 		// @todo Should the args be made safe HTML?
-		if ( isset( $args['name'] ) ) {
-			$name = $args['name'];
-		} else {
-			$name = wfMessage( 'listings-unknown' )->inContentLanguage()->text();
-		}
-		if ( isset( $args['alt'] ) ) {
-			$alt = $parser->internalParse( $args['alt'] );
-		} else {
-			$alt = '';
-		}
-		if ( isset( $args['address'] ) ) {
-			$address = $parser->internalParse( $args['address'] );
-		} else {
-			$address = '';
-		}
-		if ( isset( $args['directions'] ) ) {
-			$directions = $parser->internalParse( $args['directions'] );
-		} else {
-			$directions = '';
-		}
-		if ( isset( $args['phone'] ) ) {
-			$phone = $args['phone'];
-		} else {
-			$phone = '';
-		}
-		if ( isset( $args['tollfree'] ) ) {
-			$tollFree = $args['tollfree'];
-		} else {
-			$tollFree = '';
-		}
-		if ( isset( $args['email'] ) ) {
-			$email = $args['email'];
-		} else {
-			$email = '';
-		}
-		if ( isset( $args['fax'] ) ) {
-			$fax = $args['fax'];
-		} else {
-			$fax = '';
-		}
-		if ( isset( $args['url'] ) ) {
-			$url = $args['url'];
-		} else {
-			$url = '';
-		}
-		if ( isset( $args['hours'] ) ) {
-			$hours = $args['hours'];
-		} else {
-			$hours = '';
-		}
-		if ( isset( $args['price'] ) ) {
-			$price = $args['price'];
-		} else {
-			$price = '';
-		}
-		if ( isset( $args['checkin'] ) ) {
-			$checkin = $args['checkin'];
-		} else {
-			$checkin = '';
-		}
-		if ( isset( $args['checkout'] ) ) {
-			$checkout = $args['checkout'];
-		} else {
-			$checkout = '';
-		}
-		if ( isset( $args['lat'] ) && is_numeric( $args['lat'] ) ) {
-			$lat = $args['lat'];
-		} else {
-			$lat = 361;
-		}
-		if ( isset( $args['long'] ) && is_numeric( $args['long'] ) ) {
-			$long = $args['long'];
-		} else {
-			$long = 361;
-		}
+		$name = $args['name'] ?? wfMessage( 'listings-unknown' )->inContentLanguage()->text();
+		$alt = isset( $args['alt'] ) ? $parser->internalParse( $args['alt'] ) : '';
+		$address = isset( $args['address'] ) ? $parser->internalParse( $args['address'] ) : '';
+		$directions = isset( $args['directions'] ) ? $parser->internalParse( $args['directions'] ) : '';
+		$phone = $args['phone'] ?? '';
+		$tollFree = $args['tollfree'] ?? '';
+		$email = $args['email'] ?? '';
+		$fax = $args['fax'] ?? '';
+		$url = $args['url'] ?? '';
+		$hours = $args['hours'] ?? '';
+		$price = $args['price'] ?? '';
+		$checkin = $args['checkin'] ?? '';
+		$checkout = $args['checkout'] ?? '';
+		$lat = ( isset( $args['lat'] ) && is_numeric( $args['lat'] ) ) ? $args['lat'] : 361;
+		$long = ( isset( $args['long'] ) && is_numeric( $args['long'] ) ) ? $args['long'] : 361;
 
 		$position = '';
 		// @fixme: incorrect validation
@@ -249,42 +206,10 @@ class Listings implements ParserFirstCallInitHook {
 			}
 		}
 
-		$phoneSymbol = $parser->internalParse(
-			wfMessage( 'listings-phone-symbol' )->inContentLanguage()->text() );
-		if ( $phoneSymbol != '' ) {
-			$phoneSymbol = '<abbr title="' .
-				wfMessage( 'listings-phone' )->inContentLanguage()->escaped() .
-				'">' . $phoneSymbol . '</abbr>';
-		} else {
-			$phoneSymbol = wfMessage( 'listings-phone' )->inContentLanguage()->escaped();
-		}
-		$faxSymbol = $parser->internalParse(
-			wfMessage( 'listings-fax-symbol' )->inContentLanguage()->text() );
-		if ( $faxSymbol != '' ) {
-			$faxSymbol = '<abbr title="' .
-				wfMessage( 'listings-fax' )->inContentLanguage()->escaped() .
-				'">' . $faxSymbol . '</abbr>';
-		} else {
-			$faxSymbol = wfMessage( 'listings-fax' )->inContentLanguage()->escaped();
-		}
-		$emailSymbol = $parser->internalParse(
-			wfMessage( 'listings-email-symbol' )->inContentLanguage()->text() );
-		if ( $emailSymbol != '' ) {
-			$emailSymbol = '<abbr title="' .
-				wfMessage( 'listings-email' )->inContentLanguage()->escaped() .
-				'">' . $emailSymbol . '</abbr>';
-		} else {
-			$emailSymbol = wfMessage( 'listings-email' )->inContentLanguage()->escaped();
-		}
-		$tollFreeSymbol = $parser->internalParse(
-			wfMessage( 'listings-tollfree-symbol' )->inContentLanguage()->text() );
-		if ( $tollFreeSymbol != '' ) {
-			$tollFreeSymbol = '<abbr title="' .
-				wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped() .
-				'">' . $tollFreeSymbol . '</abbr>';
-		} else {
-			$tollFreeSymbol = wfMessage( 'listings-tollfree' )->inContentLanguage()->escaped();
-		}
+		$phoneSymbol = self::getParsedSymbol( 'phone' );
+		$faxSymbol = self::getParsedSymbol( 'fax' );
+		$emailSymbol = self::getParsedSymbol( 'email' );
+		$tollFreeSymbol = self::getParsedSymbol( 'tollfree' );
 
 		if ( ( $phone != '' ) || ( $tollFree != '' ) ) {
 			// @todo FIXME: i18n issue (hard coded comma list, space)
