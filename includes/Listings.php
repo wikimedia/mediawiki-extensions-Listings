@@ -2,10 +2,10 @@
 
 namespace MediaWiki\Extension\Listings;
 
-use Html;
 use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Html\Html;
+use MediaWiki\Parser\Sanitizer;
 use Parser;
-use Sanitizer;
 
 class Listings implements ParserFirstCallInitHook {
 
